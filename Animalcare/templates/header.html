@@ -1,0 +1,51 @@
+<header class="header_area">
+           	<div class="top_menu row m0">
+           		<div class="container">
+					<div class="float-left">
+						<ul class="list header_social">
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+							<li><a href="#"><i class="fa fa-behance"></i></a></li>
+						</ul>
+					</div>
+					<div class="float-right">
+
+						<a class="ac_btn" href="{%url 'animalcare:event_detail_az' slug %}">AZ</a>
+						<a class="ac_btn" href="{%url 'animalcare:event_detail_eng' slug  %}">EN</a>
+						<a class="ac_btn" href="#">Donate Now</a>
+					</div>
+           		</div>
+           	</div>
+            <div class="main_menu">
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="index.html" style="height:70px;"><img src="{{home.logo.url}}" style="height:70px;" alt=""></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav ml-auto">
+								{%if language.language_name == "English"%}
+								<li class="nav-item active"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:homeeng'%}">{{menu.home}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:about_us_eng'%}">{{menu.about}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:events_eng'%}">{{menu.events}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_eng'%}"  style="color: #1a7f17;">{{menu.contact}}</a></li>
+								{%else%}
+								<li class="nav-item active"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:homeaz'%}">{{menu.home}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:about_us_az'%}">{{menu.about}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:events_az'%}">{{menu.events}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_az'%}"  style="color: #1a7f17;">{{menu.contact}}</a></li>
+								{%endif%}
+							</ul>
+
+						</div>
+					</div>
+            	</nav>
+            </div>
+
+        </header>
