@@ -61,18 +61,22 @@ def events_eng(request):
     language = Languages.objects.get(language_name="English")
 
     menu = Menu.objects.get(language=language)
-    event_campaign=Event.objects.all().filter(type="campaign")
+    event_charity_sale=Event.objects.all().filter(type="charity")
     event_concerts=Event.objects.all().filter(type="concert")
     event_films=Event.objects.all().filter(type="film")
     event_ecoproject=Event.objects.all().filter(type="ecoproject")
     home = Home.objects.get(language=language)
+    event_feeding = Event.objects.all().filter(type="feeding")
+    event_awareness = Event.objects.all().filter(type="awareness")
     context = {
         'menu': menu,
-        'campaign':event_campaign,
+        'charity_sale':event_charity_sale,
         'concert': event_concerts,
         'film': event_films,
         'ecopro': event_ecoproject,
         'langs': langs,
+        'feeding':event_feeding,
+        'awareness':event_awareness,
         'home': home,
         'language': language,
 
@@ -105,6 +109,36 @@ def event_detail_eng(request,slug):
         'event_img_8': event.event_image8,
         'event_img_9': event.event_image9,
         'event_img_10': event.event_image10,
+        'event_img_11': event.event_image11,
+        'event_img_12': event.event_image12,
+        'event_img_13': event.event_image13,
+        'event_img_14': event.event_image14,
+        'event_img_15': event.event_image15,
+        'event_img_16': event.event_image16,
+        'event_img_17': event.event_image17,
+        'event_img_18': event.event_image18,
+        'event_img_19': event.event_image19,
+        'event_img_20': event.event_image20,
+        'event_img_21': event.event_image21,
+        'event_img_22': event.event_image22,
+        'event_img_23': event.event_image23,
+        'event_img_24': event.event_image24,
+        'event_img_25': event.event_image25,
+        'event_img_26': event.event_image26,
+        'event_img_27': event.event_image27,
+        'event_img_28': event.event_image28,
+        'event_img_29': event.event_image29,
+        'event_img_30': event.event_image30,
+        'event_img_31': event.event_image31,
+        'event_img_32': event.event_image32,
+        'event_img_33': event.event_image33,
+        'event_img_34': event.event_image34,
+        'event_img_35': event.event_image35,
+        'event_img_36': event.event_image36,
+        'event_img_37': event.event_image37,
+        'event_img_38': event.event_image38,
+        'event_img_39': event.event_image39,
+        'event_img_40': event.event_image40,
         'event_details':event.details_in_eng,
         'home_logo':home.logo,
         'address':event.event_address,
@@ -188,6 +222,7 @@ def homeinaze(request):
         'animal_need_help': animal_need_help,
         # 'percentage':percentage,
         'event': event,
+        'language':language,
 
 
         'donor_review': donor_review,
@@ -199,9 +234,11 @@ def homeinaze(request):
 def events_aze(request):
     langs = Languages.objects.all()
     language = Languages.objects.get(language_name="Azerbaijani")
-
+    event_charity_sale = Event.objects.all().filter(type="charity")
+    event_feeding = Event.objects.all().filter(type="feeding")
+    event_awareness = Event.objects.all().filter(type="awareness")
     menu = Menu.objects.get(language=language)
-    event_campaign=Event.objects.all().filter(type="campaign")
+
     event_concerts=Event.objects.all().filter(type="concert")
     event_films=Event.objects.all().filter(type="film")
     event_ecoproject=Event.objects.all().filter(type="ecoproject")
@@ -210,13 +247,15 @@ def events_aze(request):
 
         'menu':menu,
         'menu_contact': menu.contact,
-        'campaign':event_campaign,
         'concert': event_concerts,
         'film': event_films,
         'ecopro': event_ecoproject,
         'langs': langs,
         'home': home,
         'language': language,
+        'feeding': event_feeding,
+        'awareness': event_awareness,
+        'charity_sale':event_charity_sale,
 
     }
     return render(request, "event.html", context)
@@ -248,6 +287,36 @@ def event_detail_az(request,slug):
         'event_img_8': event.event_image8,
         'event_img_9': event.event_image9,
         'event_img_10': event.event_image10,
+        'event_img_11': event.event_image11,
+        'event_img_12': event.event_image12,
+        'event_img_13': event.event_image13,
+        'event_img_14': event.event_image14,
+        'event_img_15': event.event_image15,
+        'event_img_16': event.event_image16,
+        'event_img_17': event.event_image17,
+        'event_img_18': event.event_image18,
+        'event_img_19': event.event_image19,
+        'event_img_20': event.event_image20,
+        'event_img_21': event.event_image21,
+        'event_img_22': event.event_image22,
+        'event_img_23': event.event_image23,
+        'event_img_24': event.event_image24,
+        'event_img_25': event.event_image25,
+        'event_img_26': event.event_image26,
+        'event_img_27': event.event_image27,
+        'event_img_28': event.event_image28,
+        'event_img_29': event.event_image29,
+        'event_img_30': event.event_image30,
+        'event_img_31': event.event_image31,
+        'event_img_32': event.event_image32,
+        'event_img_33': event.event_image33,
+        'event_img_34': event.event_image34,
+        'event_img_35': event.event_image35,
+        'event_img_36': event.event_image36,
+        'event_img_37': event.event_image37,
+        'event_img_38': event.event_image38,
+        'event_img_39': event.event_image39,
+        'event_img_40': event.event_image40,
         'event_details':event.details_in_az,
         'home_logo':home.logo,
         'address':event.event_address,

@@ -23,11 +23,12 @@
 		<link rel="stylesheet" href="{% static 'css/_testimonials.css'%}">
 		<link rel="stylesheet" href="{% static 'css/_testimonials.css.map'%}">
         <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
-		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
-	<style>
+		<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+		<style>
 .causes_item .causes_img .c_parcent span:before {
         content: attr(data-content);
         position: absolute;
@@ -69,7 +70,10 @@ font-family: 'Arimo', sans-serif;
 	width:120px;
 	}
 
-	}
+}
+.nav-link{
+font-family: 'Raleway', sans-serif;
+}
 
 
 </style>
@@ -117,15 +121,15 @@ font-family: 'Arimo', sans-serif;
 						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 							<ul class="nav navbar-nav menu_nav ml-auto">
 								{%if language.language_name == "English"%}
-								<li class="nav-item active"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:homeeng'%}">{{menu.home}}</a></li>
-								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:about_us_eng'%}">{{menu.about}}</a></li>
-								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:events_eng'%}">{{menu.events}}</a></li>
-								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_eng'%}"  style="color: #1a7f17;">{{menu.contact}}</a></li>
+								<li class="nav-item active"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:homeeng'%}">{{menu.home}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:about_us_eng'%}">{{menu.about}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:events_eng'%}">{{menu.events}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_eng'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.contact}}</a></li>
 								{%else%}
-								<li class="nav-item active"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:homeaz'%}">{{menu.home}}</a></li>
-								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:about_us_az'%}">{{menu.about}}</a></li>
-								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:events_az'%}">{{menu.events}}</a></li>
-								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_az'%}"  style="color: #1a7f17;">{{menu.contact}}</a></li>
+								<li class="nav-item active"><a class="nav-link" style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;" href="{%url 'animalcare:homeaz'%}">{{menu.home}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;" href="{%url 'animalcare:about_us_az'%}">{{menu.about}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;" href="{%url 'animalcare:events_az'%}">{{menu.events}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_az'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.contact}}</a></li>
 								{%endif%}
 							</ul>
 
@@ -143,10 +147,10 @@ font-family: 'Arimo', sans-serif;
             	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" style="background:url( {%static 'background.jpg'%} ) no-repeat scroll center center;"></div>
 				<div class="container">
 					<div class="banner_content text-center">
-						<h5>{{home.slogan}}</h5>
+
 						<h3></h3>
-						<a class="main_btn" href="#">Donate Now</a>
-						<a class="white_btn" href="#">View Activity</a>
+						<a class="main_btn" style="background:#ff0000;" href="#">Donate Now</a>
+
 					</div>
 				</div>
             </div>
@@ -293,7 +297,7 @@ font-family: 'Arimo', sans-serif;
         			</div>
         			<div class="col-lg-8">
         				<div class="testi_slider owl-carousel">
-							{%for donor_review in donor_review%}
+							{%for donor_review in testimonial%}
 							<div class="item">
 								<div class="testi_item">
 									<img src="{{donor_review.donor_image.url}}" style="width:180px; height:180px;" alt="">

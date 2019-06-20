@@ -22,25 +22,32 @@
         <link rel="stylesheet" href="{% static 'css/responsive.css'%}">
 		<link rel="stylesheet" href="{% static 'css/_testimonials.css'%}">
 		<link rel="stylesheet" href="{% static 'css/_testimonials.css.map'%}">
+		<link rel="stylesheet" href="{% static 'scss/_event.scss'%}">
+
         <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
+
 		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
 <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
 <script>
 $(document).ready(function(){
-$("#campaign").hide();
+$("#charity_sale").hide();
 $("#film").hide()
 $("#ecopro").hide();
 $("#concert").hide();
 $("#button_area").show();
+$("#feeding").hide();
+$("#awareness").hide();
 
   $("#button_campaign").click(function(){
 					$("#film").hide()
 					$("#ecopro").hide();
 					$("#concert").hide();
 					$("#button_area").hide();
-					$("#campaign").toggle();
+					$("#charity_sale").toggle();
+					$("#feeding").hide();
+					$("#awareness").hide();
   });
 
   $("#button_film").click(function(){
@@ -48,7 +55,9 @@ $("#button_area").show();
 					$("#ecopro").hide();
 					$("#concert").hide();
 					$("#button_area").hide();
-					$("#campaign").hide();
+					$("#charity_sale").hide();
+					$("#feeding").hide();
+					$("#awareness").hide();
   });
 
   $("#button_concert").click(function(){
@@ -56,7 +65,9 @@ $("#button_area").show();
 					$("#ecopro").hide();
 					$("#concert").toggle();
 					$("#button_area").hide();
-					$("#campaign").hide();
+					$("#charity_sale").hide();
+					$("#feeding").hide();
+					$("#awareness").hide();
   });
 
   $("#button_ecopro").click(function(){
@@ -64,7 +75,29 @@ $("#button_area").show();
 					$("#ecopro").toggle();
 					$("#concert").hide();
 					$("#button_area").hide();
-					$("#campaign").hide();
+					$("#charity_sale").hide();
+					$("#feeding").hide();
+					$("#awareness").hide();
+  });
+
+  $("#button_feeding").click(function(){
+					$("#film").hide()
+					$("#feeding").toggle();
+					$("#concert").hide();
+					$("#button_area").hide();
+					$("#charity_sale").hide();
+					$("#awareness").hide();
+					$("#film").hide()
+  });
+  $("#button_awareness").click(function(){
+					$("#film").hide()
+					$("#ecopro").hide();
+					$("#concert").hide();
+					$("#button_area").hide();
+					$("#charity_sale").hide();
+					$("#awareness").toggle();
+					$("#feeding").hide();
+
   });
 
   $(".back").click(function(){
@@ -72,7 +105,11 @@ $("#button_area").show();
 					$("#ecopro").hide();
 					$("#concert").hide();
 					$("#button_area").toggle();
-					$("#campaign").hide();
+					$("#charity_sale").hide();
+					$("#awareness").hide();
+					$("#feeding").hide();
+
+
   });
 
 
@@ -124,6 +161,17 @@ margin:auto;
 	}
 
 	}
+
+a:hover {
+  color: green;
+}
+img{
+object-fit: cover;
+}
+
+
+
+
 </style>
     </head>
     <body>
@@ -170,15 +218,15 @@ margin:auto;
 						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 							<ul class="nav navbar-nav menu_nav ml-auto">
 								{%if language.language_name == "English"%}
-								<li class="nav-item active"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:homeeng'%}">{{menu.home}}</a></li>
-								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:about_us_eng'%}">{{menu.about}}</a></li>
-								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:events_eng'%}">{{menu.events}}</a></li>
-								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_eng'%}"  style="color: #1a7f17;">{{menu.contact}}</a></li>
+								<li class="nav-item active"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:homeeng'%}">{{menu.home}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:about_us_eng'%}">{{menu.about}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:events_eng'%}">{{menu.events}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_eng'%}"  style="font-family: 'Raleway', sans-serif;font-weight:bold;color: #1a7f17;">{{menu.contact}}</a></li>
 								{%else%}
-								<li class="nav-item active"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:homeaz'%}">{{menu.home}}</a></li>
-								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:about_us_az'%}">{{menu.about}}</a></li>
-								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:events_az'%}">{{menu.events}}</a></li>
-								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_az'%}"  style="color: #1a7f17;">{{menu.contact}}</a></li>
+								<li class="nav-item active"><a class="nav-link" style="font-family: 'Raleway', sans-serif;font-weight:bold;color: #1a7f17;" href="{%url 'animalcare:homeaz'%}">{{menu.home}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="font-family: 'Raleway', sans-serif;font-weight:bold;color: #1a7f17;" href="{%url 'animalcare:about_us_az'%}">{{menu.about}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="font-family: 'Raleway', sans-serif;font-weight:bold;color: #1a7f17;" href="{%url 'animalcare:events_az'%}">{{menu.events}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_az'%}"  style="font-family: 'Raleway', sans-serif;font-weight:bold;color: #1a7f17;">{{menu.contact}}</a></li>
 								{%endif%}
 							</ul>
 
@@ -208,26 +256,37 @@ margin:auto;
 
 
 
-			<div style="width:75%;margin:auto;min-height:350px; " id="button_area">
+			<div style="width:90%;margin:auto;min-height:350px; " id="button_area" >
 					<div class="flex-container">
 						<div id="button_campaign">
 
-							<div style="width:100%;height:30px;margin:auto;margin-top:50px;" ><h3 >{% if language.language_name == "English" %} Campaign {% else %} Kampaniya {% endif %}</h3></div>
+							<div style="width:100%;height:30px;margin:auto;margin-top:50px;" ><h3 >{% if language.language_name == "English" %} Campaign {% else %} Kərməs {% endif %}</h3></div>
 						</div>
-					<div id="button_concert">
-							<div style="width:100%;height:30px;margin:auto;margin-top:50px;"><h3>{% if language.language_name == "English" %} Concert{% else %} Konsert {% endif %}</h3></div>
+						<div id="button_concert">
+								<div style="width:100%;height:30px;margin:auto;margin-top:50px;"><h3>{% if language.language_name == "English" %} Concert{% else %} Konsertlər {% endif %}</h3></div>
 
-					</div>
+						</div>
+
+						<div id="button_film">
+							<div style="width:100%;height:30px;margin:auto;margin-top:50px;"><h3>{% if language.language_name == "English" %} Film {% else %} Xeyriyyə filmləri {% endif %}</h3></div>
+						</div>
 					</div>
 					<div class="flex-container">
-						<div id="button_film">
-							<div style="width:100%;height:30px;margin:auto;margin-top:50px;"><h3>{% if language.language_name == "English" %} Film {% else %} Film {% endif %}</h3></div>
-						</div>
 						<div id="button_ecopro">
-							<div style="width:100%;height:30px;margin:auto;margin-top:50px;"><h3>{% if language.language_name == "English" %} Eco-Projects {% else %} Eco-Layihələr {% endif %}</h3></div>
+							<div style="width:100%;height:30px;margin:auto;margin-top:50px;"><h3>{% if language.language_name == "English" %} Eco-Projects {% else %} Ekoloji layihələr {% endif %}</h3></div>
+						</div>
+
+						<div id="button_feeding">
+							<div style="width:100%;height:30px;margin:auto;margin-top:50px;"><h3>{% if language.language_name == "English" %} Feeding Campign{% else %} Yemləmə  {% endif %}</h3></div>
+						</div>
+						<div id="button_awareness">
+							<div style="width:100%;height:30px;margin:auto;margin-top:50px;"><h3>{% if language.language_name == "English" %} Awareness {% else %} Maarifləndirmə {% endif %}</h3></div>
 						</div>
 					</div>
-				</div>
+
+
+
+			</div>
 
 
 
@@ -241,28 +300,28 @@ margin:auto;
 
 
         <!--================Event Main Area =================-->
-		<section class="event_main_area p_120" id="campaign">
+		<section class="event_main_area p_120" id="charity_sale">
 
 			<div style="width:100%;height:50px;" class="col-lg-6">     <button type="button" class="btn btn-success back">Back</button>        </div>
         	<div class="event_container" style="padding:0;">
         		<div class="row event_main_inner">
-					{%for campaign in campaign%}
+					{%for charity_sale in charity_sale%}
         			<div class="col-lg-6">
 
         				<div class="event_item">
 							<div class="media">
         						<div class="d-flex">
-        							<img src="{{campaign.image_main.url}}" style="width:120px;height:120px;" alt="">
+        							<img src="{{charity_sale.image_main.url}}" style="width:120px;height:120px;" alt="">
         						</div>
         						<div class="media-body">
 
-									<a href="#">{{campaign.date}}</a>
+									<a href="#">{{charity_sale.date}}</a>
         							{%if language.language_name == "English" %}
-									<a href="{{ campaign.get_absolute_url_eng}}"><h4>{{campaign.title_in_eng}}</h4></a>
-        							<p>{{campaign.event_little_detail_in_eng}}</p>
+									<a href="{{ charity_sale.get_absolute_url_eng}}" id="ahover"><h4>{{charity_sale.title_in_eng}}</h4></a>
+        							<p>{{charity_sale.event_little_detail_in_eng}}</p>
 									{%else%}
-									<a href="{{ campaign.get_absolute_url_az }}"><h4>{{campaign.title_in_az}}</h4></a>
-        							<p>{{campaign.event_little_detail_in_az}}</p>
+									<a href="{{ charity_sale.get_absolute_url_az }}"><h4>{{charity_sale.title_in_az}}</h4></a>
+        							<p>{{charity_sale.event_little_detail_in_az}}</p>
 									{%endif%}
         						</div>
         					</div>
@@ -300,6 +359,79 @@ margin:auto;
 									{%else%}
 									<a href="{{ concert.get_absolute_url_az }}"><h4>{{concert.title_in_az}}</h4></a>
         							<p>{{concert.event_little_detail_in_az}}</p>
+									{%endif%}
+        						</div>
+        					</div>
+        				</div>
+
+        			</div>
+					{%endfor%}
+
+
+        		</div>
+        	</div>
+        </section>
+
+		<section class="event_main_area p_120" id="awareness">
+
+				<div class="col-lg-6" style="width:100%;height: 50px;">
+					<button type="button"  class="btn btn-success back">Back</button>
+				</div>
+			<div style="width:100%;height 10px;"></div>
+        	<div class="event_container" style="">
+        		<div class="row event_main_inner">
+					{%for awareness in awareness%}
+        			<div class="col-lg-6">
+
+        				<div class="event_item">
+							<div class="media">
+        						<div class="d-flex">
+        							<img src="{{awareness.image_main.url}}" style="width:120px;height:120px;" alt="">
+        						</div>
+        						<div class="media-body">
+        							<a href="#">{{awareness.date}}</a>
+        							{%if language.language_name == "English" %}
+									<a href="{{ awareness.get_absolute_url_eng }}"><h4 onmouseover="this.style.backgroundColor='green'" onmouseout="this.style.backgroundColor='green'">{{awareness.title_in_eng}}</h4></a>
+        							<p>{{awareness.event_little_detail_in_eng}}</p>
+									{%else%}
+									<a href="{{ awareness.get_absolute_url_az }}"><h4>{{awareness.title_in_az}}</h4></a>
+        							<p>{{awareness.event_little_detail_in_az}}</p>
+									{%endif%}
+        						</div>
+        					</div>
+        				</div>
+
+        			</div>
+					{%endfor%}
+
+
+        		</div>
+        	</div>
+        </section>
+		<section class="event_main_area p_120" id="feeding">
+
+				<div class="col-lg-6" style="width:100%;height: 50px;">
+					<button type="button"  class="btn btn-success back">Back</button>
+				</div>
+			<div style="width:100%;height 10px;"></div>
+        	<div class="event_container" style="">
+        		<div class="row event_main_inner">
+					{%for feeding in feeding%}
+        			<div class="col-lg-6">
+
+        				<div class="event_item">
+							<div class="media">
+        						<div class="d-flex">
+        							<img src="{{feeding.image_main.url}}" style="width:120px;height:120px;" alt="">
+        						</div>
+        						<div class="media-body">
+        							<a href="#">{{feeding.date}}</a>
+        							{%if language.language_name == "English" %}
+									<a href="{{ feeding.get_absolute_url_eng }}"><h4>{{feeding.title_in_eng}}</h4></a>
+        							<p>{{feeding.event_little_detail_in_eng}}</p>
+									{%else%}
+									<a href="{{ feeding.get_absolute_url_az }}"><h4>{{feeding.title_in_az}}</h4></a>
+        							<p>{{feeding.event_little_detail_in_az}}</p>
 									{%endif%}
         						</div>
         					</div>
