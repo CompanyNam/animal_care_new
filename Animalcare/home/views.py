@@ -84,6 +84,21 @@ def events_eng(request):
     return render(request, "event.html", context)
 
 
+def rescued_animals_eng(request):
+
+    language = Languages.objects.get(language_name="English")
+
+    menu = Menu.objects.get(language=language)
+    home = Home.objects.get(language=language)
+    rescued = Event.objects.all().filter(type="rescued")
+    context = {
+        'menu': menu,
+        'rescued':rescued,
+        'home': home,
+        'language': language,
+
+    }
+    return render(request, "rescued_animals.html", context)
 def event_detail_eng(request,slug):
     language = Languages.objects.get(language_name="English")
     menu = Menu.objects.get(language=language)
@@ -95,9 +110,9 @@ def event_detail_eng(request,slug):
         'home':home,
         'event_date': event.date,
         'event_little_details': event.event_little_detail_in_eng,
-        'event_title': event.title_in_eng,
+        'event_title': event.title_in_az,
         'slug':event.slug,
-        'report':Report.objects.all().filter(event=event),
+        'report': Report.objects.all().filter(event=event),
         "event_main_image": event.image_main,
         'event_img_1':event.event_image1,
         'event_img_2': event.event_image2,
@@ -139,7 +154,7 @@ def event_detail_eng(request,slug):
         'event_img_38': event.event_image38,
         'event_img_39': event.event_image39,
         'event_img_40': event.event_image40,
-        'event_details':event.details_in_eng,
+        'event_details':event.details_in_az,
         'home_logo':home.logo,
         'address':event.event_address,
         'city':event.event_city,
@@ -148,6 +163,72 @@ def event_detail_eng(request,slug):
 
     }
     return render(request, "event-details.html", context)
+
+
+def rescued_detail_eng(request,slug):
+    language = Languages.objects.get(language_name="English")
+    menu = Menu.objects.get(language=language)
+    event = get_object_or_404(Event, slug=slug)
+    home = Home.objects.get(language=language)
+
+    context = {
+        'menu':menu,
+        'home':home,
+        'rescued_date': event.date,
+        'rescued_little_details': event.event_little_detail_in_eng,
+        'rescued_title': event.title_in_eng,
+        'slug':event.slug,
+        'report':Report.objects.all().filter(event=event),
+        "rescued_main_image": event.image_main,
+        'rescued_img_1':event.event_image1,
+        'rescued_img_2': event.event_image2,
+        'rescued_img_3': event.event_image3,
+        'rescued_img_4': event.event_image4,
+        'rescued_img_5': event.event_image5,
+        'rescued_img_6': event.event_image6,
+        'rescued_img_7': event.event_image7,
+        'rescued_img_8': event.event_image8,
+        'rescued_img_9': event.event_image9,
+        'rescued_img_10': event.event_image10,
+        'rescued_img_11': event.event_image11,
+        'rescued_img_12': event.event_image12,
+        'rescued_img_13': event.event_image13,
+        'rescued_img_14': event.event_image14,
+        'rescued_img_15': event.event_image15,
+        'rescued_img_16': event.event_image16,
+        'rescued_img_17': event.event_image17,
+        'rescued_img_18': event.event_image18,
+        'rescued_img_19': event.event_image19,
+        'rescued_img_20': event.event_image20,
+        'rescued_img_21': event.event_image21,
+        'rescued_img_22': event.event_image22,
+        'rescued_img_23': event.event_image23,
+        'rescued_img_24': event.event_image24,
+        'rescued_img_25': event.event_image25,
+        'rescued_img_26': event.event_image26,
+        'rescued_img_27': event.event_image27,
+        'rescued_img_28': event.event_image28,
+        'rescued_img_29': event.event_image29,
+        'rescued_img_30': event.event_image30,
+        'rescued_img_31': event.event_image31,
+        'rescued_img_32': event.event_image32,
+        'rescued_img_33': event.event_image33,
+        'rescued_img_34': event.event_image34,
+        'rescued_img_35': event.event_image35,
+        'rescued_img_36': event.event_image36,
+        'rescued_img_37': event.event_image37,
+        'rescued_img_38': event.event_image38,
+        'rescued_img_39': event.event_image39,
+        'rescued_img_40': event.event_image40,
+        'rescued_details':event.details_in_eng,
+        'home_logo':home.logo,
+        'address':event.event_address,
+        'city':event.event_city,
+        'language': language,
+
+
+    }
+    return render(request, "rescued-details.html", context)
 
 
 def contac_us_eng(request):
@@ -172,6 +253,7 @@ def contac_us_eng(request):
         'langs':langs,
         'home':home,
         'contact':contacts,
+        'language': language,
         'contacts_mail':contacts.mail,
         'contacts_mail_text': contacts.mail_text,
         'contacts_telephone': contacts.telephone_number,
@@ -257,6 +339,7 @@ def events_aze(request):
         'awareness': event_awareness,
         'charity_sale':event_charity_sale,
 
+
     }
     return render(request, "event.html", context)
 
@@ -272,7 +355,7 @@ def event_detail_az(request,slug):
         'menu':menu,
         'home':home,
         'event_date': event.date,
-        'event_little_details': event.event_little_detail_in_eng,
+        'event_little_details': event.event_little_detail_in_az,
         'event_title': event.title_in_az,
         'slug':event.slug,
         'report': Report.objects.all().filter(event=event),
@@ -349,6 +432,7 @@ def contac_us_az(request):
         'menu':menu,
         'home':home,
         'contact':contacts,
+        'language':language,
         'contacts_mail':contacts.mail,
         'contacts_mail_text': contacts.mail_text,
         'contacts_telephone': contacts.telephone_number,
@@ -375,9 +459,96 @@ def about_us_az(request):
         'about_us': about_us,
         'write-home': write_home,
         'langs': langs,
+        'language':language,
         'testimonial': testimonial,
 
     }
     return render(request, 'about-us.html', context)
 
+
+
+
+
+def rescued_animals_az(request):
+
+    language = Languages.objects.get(language_name="Azerbaijani")
+
+    menu = Menu.objects.get(language=language)
+    home = Home.objects.get(language=language)
+    rescued = Event.objects.all().filter(type="rescued")
+    context = {
+        'menu': menu,
+        'rescued':rescued,
+        'home': home,
+        'language': language,
+
+    }
+    return render(request, "rescued_animals.html", context)
+
+
+
+def rescued_detail_az(request,slug):
+    language = Languages.objects.get(language_name="Azerbaijani")
+    menu = Menu.objects.get(language=language)
+    event = get_object_or_404(Event, slug=slug)
+    home = Home.objects.get(language=language)
+
+    context = {
+        'menu':menu,
+        'home':home,
+        'rescued_date': event.date,
+        'rescued_little_details': event.event_little_detail_in_az,
+        'rescued_title': event.title_in_az,
+        'slug':event.slug,
+        'report':Report.objects.all().filter(event=event),
+        "rescued_main_image": event.image_main,
+        'rescued_img_1':event.event_image1,
+        'rescued_img_2': event.event_image2,
+        'rescued_img_3': event.event_image3,
+        'rescued_img_4': event.event_image4,
+        'rescued_img_5': event.event_image5,
+        'rescued_img_6': event.event_image6,
+        'rescued_img_7': event.event_image7,
+        'rescued_img_8': event.event_image8,
+        'rescued_img_9': event.event_image9,
+        'rescued_img_10': event.event_image10,
+        'rescued_img_11': event.event_image11,
+        'rescued_img_12': event.event_image12,
+        'rescued_img_13': event.event_image13,
+        'rescued_img_14': event.event_image14,
+        'rescued_img_15': event.event_image15,
+        'rescued_img_16': event.event_image16,
+        'rescued_img_17': event.event_image17,
+        'rescued_img_18': event.event_image18,
+        'rescued_img_19': event.event_image19,
+        'rescued_img_20': event.event_image20,
+        'rescued_img_21': event.event_image21,
+        'rescued_img_22': event.event_image22,
+        'rescued_img_23': event.event_image23,
+        'rescued_img_24': event.event_image24,
+        'rescued_img_25': event.event_image25,
+        'rescued_img_26': event.event_image26,
+        'rescued_img_27': event.event_image27,
+        'rescued_img_28': event.event_image28,
+        'rescued_img_29': event.event_image29,
+        'rescued_img_30': event.event_image30,
+        'rescued_img_31': event.event_image31,
+        'rescued_img_32': event.event_image32,
+        'rescued_img_33': event.event_image33,
+        'rescued_img_34': event.event_image34,
+        'rescued_img_35': event.event_image35,
+        'rescued_img_36': event.event_image36,
+        'rescued_img_37': event.event_image37,
+        'rescued_img_38': event.event_image38,
+        'rescued_img_39': event.event_image39,
+        'rescued_img_40': event.event_image40,
+        'rescued_details':event.details_in_eng,
+        'home_logo':home.logo,
+        'address':event.event_address,
+        'city':event.event_city,
+        'language': language,
+
+
+    }
+    return render(request, "rescued-details.html", context)
 

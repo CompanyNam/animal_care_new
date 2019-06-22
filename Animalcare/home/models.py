@@ -17,18 +17,19 @@ class Languages(models.Model):
 
 class Menu(models.Model):
     home = models.CharField(max_length=122)
-    gallery = models.CharField(max_length=122)
     about = models.CharField(max_length=122)
     events = models.CharField(max_length=122)
-    pages = models.CharField(max_length=122)
-    blog = models.CharField(max_length=122)
+    rescued=models.CharField(max_length=60)
     contact = models.CharField(max_length=122)
     language = models.ForeignKey(Languages, on_delete=models.CASCADE)
 
 
     def __str__(self):
 
-        return self.home+" / "+self.gallery+" / "+self.about+" / "+self.events+" / "+self.pages+" / "+self.blog+" / "+self.contact+"/"+ "this menu is in ==================>"+self.language.language_name
+        return self.home+" /  / "+self.about+" / "+self.events+" /  "+self.contact+"/"+ "this menu is in ==================>"+self.language.language_name
+
+
+
 
 class Home(models.Model):
 
@@ -66,7 +67,7 @@ class Home(models.Model):
 
 class Report(models.Model):
     donor_name = models.CharField(max_length=44)
-    amount = models.CharField(max_length=20)
+    amount = models.CharField(max_length=19)
 
 
 class Event(models.Model):
@@ -136,6 +137,11 @@ class Event(models.Model):
     def get_absolute_url_az(self):
         return reverse('animalcare:event_detail_az', kwargs={'slug': self.slug})
 
+    def get_rescued_absolute_url_eng(self):
+        return reverse('animalcare:rescued_detail_eng', kwargs={'slug': self.slug})
+
+    def get_rescued_absolute_url_az(self):
+        return reverse('animalcare:rescued_detail_az', kwargs={'slug': self.slug})
 
         # return "/post/{}".format(self.id)
 
@@ -157,8 +163,6 @@ class Event(models.Model):
     def save(self, *args, **kwargs):
         self.slug = self.get_unique_slug()
         return super(Event, self).save(*args, **kwargs)
-
-
 
 
 class Volunteer(models.Model):

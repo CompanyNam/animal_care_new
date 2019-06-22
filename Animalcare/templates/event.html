@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
         <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
         <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
-        <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css'%}">
+
         <link rel="stylesheet" href="{% static 'vendors/lightbox/simpleLightbox.css'%}">
         <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css'%}">
         <link rel="stylesheet" href="{% static 'vendors/animate-css/animate.css'%}">
@@ -23,7 +23,7 @@
 		<link rel="stylesheet" href="{% static 'css/_testimonials.css'%}">
 		<link rel="stylesheet" href="{% static 'css/_testimonials.css.map'%}">
 		<link rel="stylesheet" href="{% static 'scss/_event.scss'%}">
-
+		<!--<link rel="stylesheet" href="{% static 'jquery-3.2.1.min.js'%}">-->
         <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
 
 		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
@@ -162,17 +162,16 @@ margin:auto;
 
 	}
 
-a:hover {
-  color: green;
+h4:hover,a:hover {
+  color: #1a7f17 !important;
 }
+
 img{
-object-fit: cover;
+ object-fit: cover;
 }
-
-
-
 
 </style>
+
     </head>
     <body>
         
@@ -221,12 +220,15 @@ object-fit: cover;
 								<li class="nav-item active"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:homeeng'%}">{{menu.home}}</a></li>
 								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:about_us_eng'%}">{{menu.about}}</a></li>
 								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:events_eng'%}">{{menu.events}}</a></li>
-								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_eng'%}"  style="font-family: 'Raleway', sans-serif;font-weight:bold;color: #1a7f17;">{{menu.contact}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:rescued_eng'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.rescued}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_eng'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.contact}}</a></li>
+
 								{%else%}
-								<li class="nav-item active"><a class="nav-link" style="font-family: 'Raleway', sans-serif;font-weight:bold;color: #1a7f17;" href="{%url 'animalcare:homeaz'%}">{{menu.home}}</a></li>
-								<li class="nav-item"><a class="nav-link" style="font-family: 'Raleway', sans-serif;font-weight:bold;color: #1a7f17;" href="{%url 'animalcare:about_us_az'%}">{{menu.about}}</a></li>
-								<li class="nav-item"><a class="nav-link" style="font-family: 'Raleway', sans-serif;font-weight:bold;color: #1a7f17;" href="{%url 'animalcare:events_az'%}">{{menu.events}}</a></li>
-								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_az'%}"  style="font-family: 'Raleway', sans-serif;font-weight:bold;color: #1a7f17;">{{menu.contact}}</a></li>
+								<li class="nav-item active"><a class="nav-link" style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;" href="{%url 'animalcare:homeaz'%}">{{menu.home}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;" href="{%url 'animalcare:about_us_az'%}">{{menu.about}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;" href="{%url 'animalcare:events_az'%}">{{menu.events}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:rescued_az'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.rescued}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_az'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.contact}}</a></li>
 								{%endif%}
 							</ul>
 
@@ -317,7 +319,7 @@ object-fit: cover;
 
 									<a href="#">{{charity_sale.date}}</a>
         							{%if language.language_name == "English" %}
-									<a href="{{ charity_sale.get_absolute_url_eng}}" id="ahover"><h4>{{charity_sale.title_in_eng}}</h4></a>
+									<a href="{{ charity_sale.get_absolute_url_eng}}" ><h4>{{charity_sale.title_in_eng}}</h4></a>
         							<p>{{charity_sale.event_little_detail_in_eng}}</p>
 									{%else%}
 									<a href="{{ charity_sale.get_absolute_url_az }}"><h4>{{charity_sale.title_in_az}}</h4></a>
@@ -427,7 +429,7 @@ object-fit: cover;
         						<div class="media-body">
         							<a href="#">{{feeding.date}}</a>
         							{%if language.language_name == "English" %}
-									<a href="{{ feeding.get_absolute_url_eng }}"><h4>{{feeding.title_in_eng}}</h4></a>
+									<a href="{{ feeding.get_absolute_url_eng }}"><h4 class="h4class">{{feeding.title_in_eng}}</h4></a>
         							<p>{{feeding.event_little_detail_in_eng}}</p>
 									{%else%}
 									<a href="{{ feeding.get_absolute_url_az }}"><h4>{{feeding.title_in_az}}</h4></a>

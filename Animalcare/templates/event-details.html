@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
         <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
         <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
-        <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css'%}">
+
         <link rel="stylesheet" href="{% static 'vendors/lightbox/simpleLightbox.css'%}">
         <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css'%}">
         <link rel="stylesheet" href="{% static 'vendors/animate-css/animate.css'%}">
@@ -136,16 +136,18 @@ color:#1fb615;
 						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 							<ul class="nav navbar-nav menu_nav ml-auto">
 								{%if language.language_name == "English"%}
-								<li class="nav-item active"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:homeeng'%}">{{menu.home}}</a></li>
-								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:about_us_eng'%}">{{menu.about}}</a></li>
-								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:events_eng'%}">{{menu.events}}</a></li>
-								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_eng'%}"  style="color: #1a7f17;">{{menu.contact}}</a></li>
+								<li class="nav-item active"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:homeeng'%}">{{menu.home}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:about_us_eng'%}">{{menu.about}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;font-family: 'Raleway', sans-serif;font-weight:bold;" href="{%url 'animalcare:events_eng'%}">{{menu.events}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:rescued_eng'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.rescued}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_eng'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.contact}}</a></li>
 
-                                {%else%}
-								<li class="nav-item active"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:homeaz'%}">{{menu.home}}</a></li>
-								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:about_us_az'%}">{{menu.about}}</a></li>
-								<li class="nav-item"><a class="nav-link" style="color: #1a7f17;" href="{%url 'animalcare:events_az'%}">{{menu.events}}</a></li>
-								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_az'%}"  style="color: #1a7f17;">{{menu.contact}}</a></li>
+								{%else%}
+								<li class="nav-item active"><a class="nav-link" style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;" href="{%url 'animalcare:homeaz'%}">{{menu.home}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;" href="{%url 'animalcare:about_us_az'%}">{{menu.about}}</a></li>
+								<li class="nav-item"><a class="nav-link" style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;" href="{%url 'animalcare:events_az'%}">{{menu.events}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:rescued_az'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.rescued}}</a></li>
+								<li class="nav-item"><a class="nav-link" href="{%url 'animalcare:contact_us_az'%}"  style="font-weight:bold;font-family: 'Raleway', sans-serif;color: #1a7f17;">{{menu.contact}}</a></li>
 								{%endif%}
 							</ul>
 
