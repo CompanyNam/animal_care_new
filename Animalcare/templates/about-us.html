@@ -8,24 +8,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="img/favicon.png" type="image/png">
-        <title>Kindity Charity Multi</title>
+        <title>{{menu.about}}</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
         <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
         <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
-
+        <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css'%}">
         <link rel="stylesheet" href="{% static 'vendors/lightbox/simpleLightbox.css'%}">
         <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css'%}">
         <link rel="stylesheet" href="{% static 'vendors/animate-css/animate.css'%}">
         <!-- main css -->
         <link rel="stylesheet" href="{% static 'css/style.css'%}">
-        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
-		<link rel="stylesheet" href="{% static 'css/_testimonials.css' %}">
-		<link rel="stylesheet" href="{% static 'css/testimonials.css.map'%}">
-		<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/responsive.css'%}">
+        <link rel="stylesheet" href="{% static 'css/testimonials.css'%}">
+        <link rel="stylesheet" href="{% static 'css/testimonials.css.map'%}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
 		<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 	<style>
 		@media (max-width:575px){
 	.top_menu {
@@ -37,6 +40,9 @@
 
 	}
 
+.nav-link{
+font-family: 'Raleway', sans-serif;
+}
 	</style>
 	</head>
 
@@ -168,32 +174,33 @@
         <!--================End Welcome Area =================-->
         
         <!--================Feature Area =================-->
-        <section class="feature_area p_120">
-        	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
-        	<div class="container">
-        		<div class="row testimonials_inner">
-        			<div class="col-lg-4">
-        				<div class="testi_left_text">
-        					<h4>{{home.testimonial_title}}</h4>
-        					<p>{{home.testimonial_text}}</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-8">
-        				<div class="testi_slider owl-carousel">
-							{%for donor_review in testimonial%}
-							<div class="item">
-								<div class="testi_item">
-									<img src="{{donor_review.donor_image.url}}" style="width:180px; height:180px;" alt="">
-									<p>{{donor_review.donor_description}}</p>
-									<h4>{{donor_review.donor_name}}</h4>
-									<h6>{{donor_review.donor_is_who}}</h6>
-								</div>
-							</div>
-							{%endfor%}
-						</div>
-        			</div>
-        		</div>
-        	</div>
+         <section class="testimonials_area p_120" >
+            <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="" style="transform: translateY(-35.4894px); "></div>
+
+            <div class="container" >
+                <div class="row testimonials_inner">
+                    <div class="col-lg-4">
+                        <div class="testi_left_text">
+                            <h4>{{home.testimonial_title}}</h4>
+                            <p>{{home.testimonial_text}}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="testi_slider owl-carousel">
+                            {%for testimonial in testimonial%}
+                            <div class="item">
+                                <div class="testi_item">
+                                    <img src="{{testimonial.donor_image.url}}" style="width:180px; height:180px;" alt="">
+                                    <p>{{testimonial.donor_description}}</p>
+                                    <h4>{{testimonial.donor_name}}</h4>
+                                    <h6>{{testimonial.donor_is_who}}</h6>
+                                </div>
+                            </div>
+                            {%endfor%}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!--================End Feature Area =================-->
         

@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="img/favicon.png" type="image/png">
-        <title>Kindity Charity Multi</title>
+        <title>{{menu.rescued}}</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
         <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
@@ -24,7 +24,7 @@
 		<link rel="stylesheet" href="{% static 'css/_testimonials.css.map'%}">
 		<link rel="stylesheet" href="{% static 'scss/_event.scss'%}">
 
-        <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
 		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -66,6 +66,7 @@ font-family: 'Arimo', sans-serif;
 width:65%;
 margin:auto;
 }
+
 
 @media (max-width:575px){
 	.top_menu {
@@ -189,7 +190,7 @@ img{
         				<div class="event_item">
 							<div class="media">
         						<div class="d-flex">
-        							<img src="{{rescued.image_main.url}}" style="width:120px;height:120px;" alt="">
+        							<img src="{{rescued.image_main}}" style="width:120px;height:120px;" alt="">
         						</div>
         						<div class="media-body">
 
