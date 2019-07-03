@@ -22,9 +22,9 @@ STATIC_DIR = os.path.join(BASE_DIR, 'staticfiles')
 SECRET_KEY = '*p&9i67(r=yn-pk(uulurxk_6ffkd0^)x=c(e#1w*arhas(-u-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['139.59.138.13','127.0.0.1:8000']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -80,12 +80,8 @@ WSGI_APPLICATION = 'Animalcare.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Animalcare',
-        'USER': 'sammy',
-        'PASSWORD': 'ayxan123',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -132,6 +128,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/var/www/static/',
 ]
-STATIC_ROOT = os.path.join(BASE_DIR,'static_root')
+STATIC_ROOT = '/home/urban/static/'
 
 PAYPAL_RECEIVER_EMAIL = 'aykhan.israfilli@ufaz.az'
