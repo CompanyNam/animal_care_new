@@ -22,7 +22,7 @@ STATIC_DIR = os.path.join(BASE_DIR, 'staticfiles')
 SECRET_KEY = '*p&9i67(r=yn-pk(uulurxk_6ffkd0^)x=c(e#1w*arhas(-u-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -81,9 +81,9 @@ WSGI_APPLICATION = 'Animalcare.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'urban_prod',
-        'USER': 'u_urban',
-        'PASSWORD': '123',
+        'NAME': 'animalcare',
+        'USER': 'gunay',
+        'PASSWORD': 'JUTyPM*MyA&3g!n!7',
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -128,10 +128,9 @@ USE_TZ = True
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
-]
-STATIC_ROOT = '/home/urban/static/'
+#STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, "static"),
+#]
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 PAYPAL_RECEIVER_EMAIL = 'aykhan.israfilli@ufaz.az'
