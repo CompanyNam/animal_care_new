@@ -912,12 +912,9 @@ font-family: 'Raleway', sans-serif;
 
 
     <script>
-                $(function() {
-                        $('.pop').on('click', function() {
-                            $('.imagepreview').attr('src', $(this).find('img').attr('src'));
-                            $('#imagemodal').modal('show');
-                        });
-                });
+                $('button[data-slide-to]').on('click', function(){
+    $('#basicExample').carousel($(this).data('slide-to'));
+});
     </script>
     {%if event_iframe%}
             <div class="iframe-youtube">
