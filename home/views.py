@@ -110,7 +110,7 @@ def event_detail_eng(request,slug):
         'home':home,
         'event_date': event.date,
         'event_little_details': event.event_little_detail_in_eng,
-        'event_title': event.title_in_az,
+        'event_title': event.title_in_eng,
         'slug':event.slug,
         'report': Report.objects.all().filter(event=event),
         "event_main_image": event.image_main,
