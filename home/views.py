@@ -154,7 +154,7 @@ def event_detail_eng(request,slug):
         'event_img_38': event.event_image38,
         'event_img_39': event.event_image39,
         'event_img_40': event.event_image40,
-        'event_details':event.details_in_az,
+        'event_details':event.details_in_eng,
         'home_logo':home.logo,
         'address':event.event_address,
         'city':event.event_city,
