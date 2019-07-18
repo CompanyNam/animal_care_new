@@ -101,11 +101,7 @@ font-family: 'Raleway', sans-serif;
                               <a class="ac_btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {{language.language_short_name|upper}}
                               </a>
-                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <a class="dropdown-item" href="{%url 'animalcare:homeeng'%}">EN</a>
-                                        <a class="dropdown-item" href="{%url 'animalcare:homeaz'%}">AZ</a>
-
-                                      </div>
+                                      <a class="ac_btn" style="width:50px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:event_detail_eng' slug%}">EN</a> <a class="ac_btn" style="width:75px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:event_detail_az' slug%}">AZ</a>
 
                         <a class="ac_btn" href="#">Donate Now</a>
 					</div>
