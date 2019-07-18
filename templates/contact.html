@@ -40,6 +40,10 @@
 	.nav-link{
 font-family: 'Raleway', sans-serif;
 }
+.langs:hover{
+	color:green;
+	border:green;
+}
 </style>
     </head>
     <body>
@@ -61,7 +65,8 @@ font-family: 'Raleway', sans-serif;
                               <a class="ac_btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {{language.language_short_name|upper}}
                               </a>
-                                      <a class="ac_btn" style="width:50px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:event_detail_eng' slug%}">EN</a> <a class="ac_btn" style="width:75px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:event_detail_az' slug%}">AZ</a>
+                                      <a class="ac_btn langs" style="width:50px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:event_detail_eng' slug%}">EN</a> 
+									  <a class="ac_btn langs" style="width:75px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:event_detail_az' slug%}">AZ</a>
 
                         <a class="ac_btn" href="#">Donate Now</a>
 					</div>
