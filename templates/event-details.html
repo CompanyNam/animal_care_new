@@ -95,6 +95,20 @@ color:#1fb615;
 .nav-link{
 font-family: 'Raleway', sans-serif;
 }
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
 
 
 </style>
@@ -902,134 +916,114 @@ font-family: 'Raleway', sans-serif;
 
 <div class="container">
 	<div class="row">
-	<div class="row">
-		{%if event_img_1%}
-            <div class="blocks">
-                <a href="#" data-image-id="" data-toggle="modal" data-title=""
+		<div class="row">
+		{%if event_img_1%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
                    data-image="{{event_img_1}}"
                    data-target="#image-gallery">
-                    <img class="img-thumbnail
+                    <img class="img-thumbnail"
                          src="{{event_img_1}}"
                          alt="Another alt text">
                 </a>
             </div>
 		{%endif%}
-			{%if event_img_2%}
-            <div class="blocks">
-                <a href="#" data-image-id="" data-toggle="modal" data-title=""
+            {%if event_img_2%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
                    data-image="{{event_img_2}}"
                    data-target="#image-gallery">
-                    <img class="img-thumbnail
+                    <img class="img-thumbnail"
                          src="{{event_img_2}}"
                          alt="Another alt text">
                 </a>
             </div>
-			{%endif%}
-            {%if event_img_3%}
-            <div class="blocks">
-                <a href="#" data-image-id="" data-toggle="modal" data-title=""
+		{%endif%}
+
+            {%if event_img_3%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
                    data-image="{{event_img_3}}"
                    data-target="#image-gallery">
-                    <img class="img-thumbnail
+                    <img class="img-thumbnail"
                          src="{{event_img_3}}"
                          alt="Another alt text">
                 </a>
             </div>
-			{%endif%}
-            {%if event_img_4%}
-            <div class="blocks">
-                <a href="#" data-image-id="" data-toggle="modal" data-title=""
+		{%endif%}
+            {%if event_img_4%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
                    data-image="{{event_img_4}}"
                    data-target="#image-gallery">
-                    <img class="img-thumbnail
+                    <img class="img-thumbnail"
                          src="{{event_img_4}}"
                          alt="Another alt text">
                 </a>
             </div>
-			{%endif%}
-            {%if event_img_4%}
-            <div class="blocks">
-                <a href="#" data-image-id="" data-toggle="modal" data-title=""
-                   data-image="{{event_img_4}}"
-                   data-target="#image-gallery">
-                    <img class="img-thumbnail
-                         src="{{event_img_4}}"
-                         alt="Another alt text">
-                </a>
-            </div>
-			{%endif%}
-
-
-
-            {%if event_img_5%}
-            <div class="blocks">
-                <a href="#" data-image-id="" data-toggle="modal" data-title=""
+		{%endif%}
+	{%if event_img_5%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
                    data-image="{{event_img_5}}"
                    data-target="#image-gallery">
-                    <img class="img-thumbnail
+                    <img class="img-thumbnail"
                          src="{{event_img_5}}"
                          alt="Another alt text">
                 </a>
             </div>
-			{%endif%}
-            {%if event_img_6%}
-            <div class="blocks">
-                <a  href="#" data-image-id="" data-toggle="modal" data-title=""
+		{%endif%}
+
+
+
+            {%if event_img_6%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
                    data-image="{{event_img_6}}"
                    data-target="#image-gallery">
-                    <img class="img-thumbnail
+                    <img class="img-thumbnail"
                          src="{{event_img_6}}"
                          alt="Another alt text">
                 </a>
             </div>
-			{%endif%}
-            {%if event_img_7%}
-            <div class="blocks">
-                <a  href="#" data-image-id="" data-toggle="modal" data-title=""
+		{%endif%}
+            {%if event_img_7%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
                    data-image="{{event_img_7}}"
                    data-target="#image-gallery">
-                    <img class="img-thumbnail
+                    <img class="img-thumbnail"
                          src="{{event_img_7}}"
                          alt="Another alt text">
                 </a>
             </div>
-			{%endif%}
-
-
-
-            {%if event_img_8%}
-            <div class="blocks">
-                <a  href="#" data-image-id="" data-toggle="modal" data-title=""
+		{%endif%}
+            {%if event_img_8%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
                    data-image="{{event_img_8}}"
                    data-target="#image-gallery">
-                    <img class="img-thumbnail
+                    <img class="img-thumbnail"
                          src="{{event_img_8}}"
                          alt="Another alt text">
                 </a>
             </div>
-			{%endif%}
-            {%if event_img_9%}
-            <div class="blocks">
-                <a  href="#" data-image-id="" data-toggle="modal" data-title=""
+		{%endif%}
+
+
+
+            {%if event_img_9%}	
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
                    data-image="{{event_img_9}}"
                    data-target="#image-gallery">
-                    <img class="img-thumbnail
+                    <img class="img-thumbnail"
                          src="{{event_img_9}}"
                          alt="Another alt text">
                 </a>
             </div>
-			{%endif%}
-            {%if event_img_10%}
-            <div >
-                <a  href="#" data-image-id="" data-toggle="modal" data-title=""
-                   data-image="{{event_img_10}}"
-                   data-target="#image-gallery">
-                    <img class="img-thumbnail
-                         src="{{event_img_10}}"
-                         alt="Another alt text">
-                </a>
-            </div>
-			{%endif%}
+		{%endif%}
+           
         </div>
 
 
