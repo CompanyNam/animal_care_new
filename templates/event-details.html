@@ -16,8 +16,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <link rel="stylesheet" href="{% static 'vendors/lightbox/simpleLightbox.css'%}">
+       <link rel="stylesheet" href="{% static 'vendors/lightbox/simpleLightbox.css'%}">
         <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css'%}">
         <link rel="stylesheet" href="{% static 'vendors/animate-css/animate.css'%}">
         <!-- main css -->
@@ -130,6 +129,9 @@ font-family: 'Raleway', sans-serif;
 a:hover{
 text-decoration:none !important;
 }
+*{
+font-family: 'Raleway', sans-serif !important;
+}
 
 </style>
 
@@ -144,16 +146,16 @@ text-decoration:none !important;
            		<div class="container">
 					<div class="float-left">
 						<ul class="list header_social">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-							<li><a href="#"><i class="fa fa-behance"></i></a></li>
+							<li><a href="fb.com/animalcareclub"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="instagram.com/animal.care.club"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/19061939"><i class="fa fa-linkedin"></i></a></li>
+							
 						</ul>
 					</div>
 					<div class="float-right">
 
                               
-       <a class="ac_btn langs" style="width:50px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:about_us_eng' slug%}">EN</a>
+       <a class="ac_btn langs" style="width:50px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:event_detail_eng' slug%}">EN</a>
        <a class="ac_btn langs" style="width:50px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:event_detail_az' slug%}">AZ</a>
 
                                       
@@ -203,16 +205,7 @@ text-decoration:none !important;
         <section class="banner_area">
             <div class="banner_inner d-flex align-items-center">
             	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
-				<div class="container">
-					<div class="banner_content text-center">
-						<h2 style="font-family: 'Oxygen', sans-serif;">Event Details</h2>
-						<div class="page_link">
-							<a href="#">Home</a>
-							<a href="event.html">Events</a>
-							<a href="event-details.html">Events Details</a>
-						</div>
-					</div>
-				</div>
+				
             </div>
         </section>
         <!--================End Home Banner Area =================-->
