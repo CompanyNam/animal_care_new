@@ -52,6 +52,9 @@
   border-radius: 10px;
 
 }
+.icon-bar{
+background:#1a7f17; !important;
+}
 h3{
 color: #fff;
 }
@@ -101,8 +104,26 @@ img{
     margin-right: 1px;
     margin-top: 8px;
 }
+@media (max-width: 575px){
+.list, .header_social {
+    width: 80px !important;
+    padding: 5px;
+}
+}
 .ac_btn:hover{
 color:white !important;
+}
+.icon-bar{
+background:#1a7f17 !important;
+}
+@media (max-width: 575px){
+.ac_btn{
+padding: 0px 4px !important;
+}
+}
+.banner_area .banner_inner .overlay {
+    background: url({%static 'panel.jpg'%}) no-repeat scroll center center;
+	
 }
 </style>
     </head>
@@ -122,8 +143,8 @@ color:white !important;
 					</div>
 					<div class="float-right">
 
-						<a class="langs" style="width:50px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:rescued_eng'%}">EN</a> 
-									  <a class="langs" style="width:50px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:rescued_az'%}">AZ</a>
+						<a class="langs" style="width:40px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:rescued_eng'%}">EN</a> 
+						<a class="langs" style="width:40px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:rescued_az'%}">AZ</a>
 
 
                         <a class="ac_btn" href="#">Donate Now</a>

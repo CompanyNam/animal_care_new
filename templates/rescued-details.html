@@ -110,7 +110,24 @@ color:#1fb615;
 .ac_btn:hover{
 color:white !important;
 }
-
+.icon-bar{
+background:#1a7f17 !important;
+}
+@media (max-width: 575px){
+.list, .header_social {
+    width: 80px !important;
+    padding: 5px;
+}
+}
+@media (max-width: 575px){
+.ac_btn{
+padding: 0px 4px !important;
+}
+}
+.banner_area .banner_inner .overlay {
+    background: url({%static 'panel.jpg'%}) no-repeat scroll center center;
+	
+}
 </style>
 
 
@@ -134,8 +151,8 @@ color:white !important;
 
                               
                                       
-									  <a class="langs" style="width:50px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:rescued_detail_eng' slug%}">EN</a> 
-									  <a class="langs" style="width:50px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:rescued_detail_az' slug%}">AZ</a>
+									  <a class="langs" style="width:40px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:rescued_detail_eng' slug%}">EN</a> 
+									  <a class="langs" style="width:40px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:rescued_detail_az' slug%}">AZ</a>
 
 
                         <a class="ac_btn" href="#">Donate Now</a>
@@ -182,7 +199,7 @@ color:white !important;
         <!--================Home Banner Area =================-->
         <section class="banner_area">
             <div class="banner_inner d-flex align-items-center">
-            	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+            	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="{%static 'panel.jpg'%}"></div>
 				
             </div>
         </section>

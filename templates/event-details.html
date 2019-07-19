@@ -51,6 +51,9 @@
         .modal.and.carousel {
   position: fixed; // Needed because the carousel overrides the position property
 }
+.icon-bar{
+background:#1a7f17 !important;
+}
 p{
 font-family: 'Arimo', sans-serif;
 }
@@ -62,6 +65,7 @@ h2{
 font-family: 'Oxygen', sans-serif;
 color: black;
 }
+
 body{
 font-size:17px;
 }
@@ -87,6 +91,21 @@ font-family: 'Raleway', sans-serif;
 .aaa{
 	width:100%;
 	    }
+@media (max-width: 575px){
+.list, .header_social {
+    width: 80px !important;
+    padding: 5px;
+}
+}
+@media (max-width: 575px){
+.ac_btn{
+padding: 0px 4px !important;
+}
+}
+.banner_area .banner_inner .overlay {
+    background: url({%static 'panel.jpg'%}) no-repeat scroll center center;
+	
+}
 </style>
 
 
@@ -109,8 +128,8 @@ font-family: 'Raleway', sans-serif;
 					<div class="float-right">
 
                               
-       <a class="ac_btn langs" style="width:50px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:event_detail_eng' slug%}">EN</a>
-       <a class="ac_btn langs" style="width:50px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:event_detail_az' slug%}">AZ</a>
+       <a class="ac_btn langs" style="width:40px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:event_detail_eng' slug%}">EN</a>
+       <a class="ac_btn langs" style="width:40px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:event_detail_az' slug%}">AZ</a>
 
                                       
 
@@ -1256,7 +1275,7 @@ font-family: 'Raleway', sans-serif;
 
 
         <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" style="width:auto; margin:auto;" >
+            <div class="modal-dialog modal-lg" style="width:auto; margin:auto;margin-top:100px;" >
                 <div class="modal-content" style="margin:auto;">
                     <div class="modal-header" style:>
                         <h4 class="modal-title" id="image-gallery-title"></h4>

@@ -68,6 +68,7 @@ text-decoration:none !important;
 }
 
 
+
 .flex-container {
         display: flex;
         flex-wrap: wrap;
@@ -81,7 +82,12 @@ text-decoration:none !important;
         background-color: #1a7f17;
         margin:30px;
 }
-
+@media (max-width: 575px){
+.list, .header_social {
+    width: 80px !important;
+    padding: 5px;
+}
+}
 *{
 font-family: 'Arimo', sans-serif;
 }
@@ -99,7 +105,18 @@ font-family: 'Raleway', sans-serif;
 }
 
 
-
+.icon-bar{
+background:#1a7f17 !important;
+}
+@media (max-width: 575px){
+.ac_btn{
+padding: 0px 4px !important;
+}
+}
+.banner_area .banner_inner .overlay {
+    background: url({%static 'panel.jpg'%}) no-repeat scroll center center;
+	
+}
 </style>
 	</head>
     <body>
@@ -120,8 +137,8 @@ font-family: 'Raleway', sans-serif;
 
                               
 							  
-                                      <a class="langs" style="width:50px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:homeeng'%}">EN</a> 
-									  <a class="langs" style="width:50px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:homeaz'%}">AZ</a>
+                                      <a class="langs" style="width:40px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:homeeng'%}">EN</a> 
+									  <a class="langs" style="width:40px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:homeaz'%}">AZ</a>
 
                         <a class="ac_btn" href="#">Donate Now</a>
 					</div>
