@@ -41,7 +41,17 @@ $("#button_area").show();
 $("#feeding").hide();
 $("#awareness").hide();
 
-  $("#button_campaign").click(function(){
+{%if language.language_name == "English"%}
+		x=document.getElementById("textall");
+	x.innerHTML="Events";
+	{%else%}
+	x=document.getElementById("textall");
+	x.innerHTML="Tədbirlərimiz";
+{%endif%}
+
+
+
+  $("#button_charity_sales").click(function(){
 					$("#film").hide()
 					$("#ecopro").hide();
 					$("#concert").hide();
@@ -49,6 +59,15 @@ $("#awareness").hide();
 					$("#charity_sale").toggle();
 					$("#feeding").hide();
 					$("#awareness").hide();
+					{%if language.language_name == "English"%}
+		x=document.getElementById("textall");
+	x.innerHTML="Charity Sales";
+	{%else%}
+	x=document.getElementById("textall");
+	x.innerHTML="Kərməslərimiz";
+{%endif%}
+
+					
   });
 
   $("#button_film").click(function(){
@@ -59,6 +78,14 @@ $("#awareness").hide();
 					$("#charity_sale").hide();
 					$("#feeding").hide();
 					$("#awareness").hide();
+					{%if language.language_name == "English"%}
+		x=document.getElementById("textall");
+	x.innerHTML="Films";
+	{%else%}
+	x=document.getElementById("textall");
+	x.innerHTML="Filmlər";
+{%endif%}
+					
   });
 
   $("#button_concert").click(function(){
@@ -69,6 +96,14 @@ $("#awareness").hide();
 					$("#charity_sale").hide();
 					$("#feeding").hide();
 					$("#awareness").hide();
+					{%if language.language_name == "English"%}
+		x=document.getElementById("textall");
+	x.innerHTML="Concerts";
+	{%else%}
+	x=document.getElementById("textall");
+	x.innerHTML="Konsertlərimiz";
+{%endif%}
+					
   });
 
   $("#button_ecopro").click(function(){
@@ -79,6 +114,14 @@ $("#awareness").hide();
 					$("#charity_sale").hide();
 					$("#feeding").hide();
 					$("#awareness").hide();
+					{%if language.language_name == "English"%}
+		x=document.getElementById("textall");
+	x.innerHTML="Eco-Projects";
+	{%else%}
+	x=document.getElementById("textall");
+	x.innerHTML="Ekoloji Layihələrimiz";
+{%endif%}
+					
   });
 
   $("#button_feeding").click(function(){
@@ -88,7 +131,16 @@ $("#awareness").hide();
 					$("#button_area").hide();
 					$("#charity_sale").hide();
 					$("#awareness").hide();
-					$("#film").hide()
+					$("#film").hide();
+					{%if language.language_name == "English"%}
+		x=document.getElementById("textall");
+	x.innerHTML="Feeding Campaigns";
+	{%else%}
+	x=document.getElementById("textall");
+	x.innerHTML="Yemləmə Aksiyalarimiz";
+{%endif%}
+					
+					
   });
   $("#button_awareness").click(function(){
 					$("#film").hide()
@@ -98,6 +150,14 @@ $("#awareness").hide();
 					$("#charity_sale").hide();
 					$("#awareness").toggle();
 					$("#feeding").hide();
+					{%if language.language_name == "English"%}
+		x=document.getElementById("textall");
+	x.innerHTML="Awareness";
+	{%else%}
+	x=document.getElementById("textall");
+	x.innerHTML="Maarifləndirmə";
+{%endif%}
+					
 
   });
 
@@ -109,6 +169,14 @@ $("#awareness").hide();
 					$("#charity_sale").hide();
 					$("#awareness").hide();
 					$("#feeding").hide();
+					{%if language.language_name == "English"%}
+		x=document.getElementById("textall");
+	x.innerHTML="Events";
+	{%else%}
+	x=document.getElementById("textall");
+	x.innerHTML="Tədbirlərimiz";
+{%endif%}
+					
 
 
   });
@@ -252,11 +320,17 @@ line-height: 1.5;
 font-size: 1rem;
 font-weight: 300;
 }
-
+.single-footer-widget .sub-btn {
+    background: #1fb615 !important;
+}
 </style>
 
     </head>
     <body>
+	
+	
+	
+	
         
         <!--================Header Menu Area =================-->
         <header class="header_area">
@@ -321,18 +395,66 @@ font-weight: 300;
         <section class="banner_area">
             <div class="banner_inner d-flex align-items-center">
             	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
-				
+				<div class="container">
+					<div class="banner_content text-center">
+					<h2  id="textall">
+							
+					</h2>
+					<!--	<h2  id="concert_text">
+							{%if language.language_name == "English"%}
+							Concert
+							{%else%}
+							Konsertlər
+							{%endif%}
+						</h2>
+						<h2  id="charity_sale_text">
+							{%if language.language_name == "English"%}
+							Charity Sales
+							{%else%}
+							Kərməs
+							{%endif%}
+						</h2>
+						<h2  id="film_text">
+							{%if language.language_name == "English"%}
+							Film
+							{%else%}
+							Xeyriyyə Filmləri
+							{%endif%}
+						</h2>
+						<h2  id="feeding_text">
+							{%if language.language_name == "English"%}
+							Feeding Campaigns
+							{%else%}
+							Yemləmə
+							{%endif%}
+						</h2>
+						<h2  id="ecopro_text">
+							{%if language.language_name == "English"%}
+							Eco-Projects
+							{%else%}
+							Ekoloji Layihələrimiz
+							{%endif%}
+						</h2>
+						<h2  id="awareness_text">
+							{%if language.language_name == "English"%}
+							Awareness
+							{%else%}
+							Məlumatlandırma
+							{%endif%}
+						</h2> -->
+					</div>
+				</div>
             </div>
-        </section>
+        </section>   
         <!--================End Home Banner Area =================-->
 
 
 
 			<div style="width:90%;margin:auto;min-height:350px; " id="button_area" >
 					<div class="flex-container">
-						<div id="button_campaign">
+						<div id="button_charity_sales">
 
-							<div style="width:100%;height:30px;margin:auto;margin-top:50px;" ><h3 >{% if language.language_name == "English" %} Campaign {% else %} Kərməs {% endif %}</h3></div>
+							<div style="width:100%;height:30px;margin:auto;margin-top:50px;" ><h3 >{% if language.language_name == "English" %} Charity Sales {% else %} Kərməs {% endif %}</h3></div>
 						</div>
 						<div id="button_concert">
 								<div style="width:100%;height:30px;margin:auto;margin-top:50px;"><h3>{% if language.language_name == "English" %} Concert{% else %} Konsertlər {% endif %}</h3></div>
