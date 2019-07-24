@@ -88,9 +88,7 @@ text-decoration:none !important;
     padding: 5px;
 }
 }
-*{
-font-family: 'Arimo', sans-serif;
-}
+
 @media (max-width:575px){
 	.top_menu {
 		display: flex;
@@ -292,26 +290,26 @@ margin-left: 10px;
         		<div class="row welcome_inner">
         			<div class="col-lg-6">
         				<div class="welcome_text">
-        					<h4>{{home.about_us_title}}</h4>
+        					<h4 style="font-family: 'Raleway', sans-serif;">{{home.about_us_title}}</h4>
         					<p style="font-family: 'Arimo', sans-serif;color: black;">{{home.about_us_text}}</p>
         					<div class="row">
         						<div class="col-sm-4">
         							<div class="wel_item">
-        								<i class="lnr lnr-database" style="color:#41ea2c;"></i>
+        								<i class="fa fa-paw" style="color:#41ea2c;"></i>
         								<h4>{{home.total_donation_amount}}</h4>
         								<p>{{home.total_donation_title}}</p>
         							</div>
         						</div>
         						<div class="col-sm-4">
         							<div class="wel_item">
-        								<i class="lnr lnr-book" style="color:#41ea2c;"></i>
+        								<i class="fa fa-cubes" style="color:#41ea2c;"></i>
         								<h4>{{home.total_projects_amount}}</h4>
         								<p>{{home.total_projects_title}}</p>
         							</div>
         						</div>
         						<div class="col-sm-4">
         							<div class="wel_item">
-        								<i class="lnr lnr-users" style="color:#41ea2c;"></i>
+        								<i class="fa fa-users" style="color:#41ea2c;"></i>
         								<h4>{{home.total_volunteers_amount}}</h4>
         								<p>{{home.total_volunteers_title}}</p>
         							</div>
@@ -404,15 +402,18 @@ margin-left: 10px;
         
         
         <!--================ start footer Area  =================-->	
-        <footer class="footer-area section_gap" style="padding-bottom:50px;margin-top:50px;">
+        <footer class="footer-area section_gap" style="padding-bottom:50px;margin-top:75px;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4  col-md-6 col-sm-6">
-                        <div class="single-footer-widget">
-                            <h6 class="footer_title">Animal Care Club</h6>
-                            <!--<p><i class="fa fa-map-marker"></i>  via Baku, Azerbaijan</p>
+					<h6 class="footer_title">Animal Care Club</h6>
+					<p><i class="fa fa-map-marker"></i>  via Baku, Azerbaijan</p>
 							<p><i class="fa fa-envelope"></i>  E-mail: animalcare.mailbox@gmail.com</p>
-							<p><i class="fa fa-instagram"></i>  Instagram: @animal.care.club</p>
+                        <div class="single-footer-widget">
+                            
+							
+                            
+							<!--<p><i class="fa fa-instagram"></i>  Instagram: @animal.care.club</p>
 							<p><i class="fa fa-facebook"></i>  Facebook: fb.com/animalcareclub</p>-->
 							<div class="col-lg-4 col-md-4 footer-social" style="width:100%;">
                         <a href="https://www.facebook.com/animalcareclub/?ref=br_rs"><i class="fa-2x fa fa-facebook"></i></a>
