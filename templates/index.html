@@ -162,6 +162,12 @@ margin-left: 10px;
     flex: 0 0 33.333333%;
     max-width: 100%;
 }}
+.event_slider .owl-dots .owl-dot.active {
+    background: #1fb615 !important;
+}
+h4:hover,a:hover {
+  color: #1a7f17 !important;
+}
 </style>
 	</head>
     <body>
@@ -362,7 +368,63 @@ margin-left: 10px;
         <!--================End Feature Area =================-->
         
         <!--================Event Area =================-->
-
+		{%if language.language_name == "English"%}
+		<section class="event_area p_120">
+        	<div class="container">
+        		<div class="main_title">
+        			<h2>Upcoming Events</h2>
+        			<p>If you are a serious astronomy fanatic like a lot of us are, you can probably <br /> remember that one event in childhood that started.</p>
+        		</div>
+        		<div class="event_slider owl-carousel">
+        			{%for event in event%}
+        			<div class="item">
+        				<div class="event_item">
+        					<div class="media">
+        						<div class="d-flex">
+        							<img src="{{event.image_main}}" style="width:240px;height:240px;object-fit: cover;" alt="">
+        						</div>
+        						<div class="media-body">
+        							<a href="{{ event.get_absolute_url_eng}}">{{event.date}}</a>
+        							<a href="{{ event.get_absolute_url_eng}}"><h4>{{event.title_in_eng}}</h4></a>
+        							<p>{{event.event_little_detail_in_eng}}</p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+					{%endfor%}
+				
+				</div>
+        	</div>
+        </section>
+		{%else%}
+		<section class="event_area p_120">
+        	<div class="container">
+        		<div class="main_title">
+        			<h2>Upcoming Events</h2>
+        			<p>If you are a serious astronomy fanatic like a lot of us are, you can probably <br /> remember that one event in childhood that started.</p>
+        		</div>
+        		<div class="event_slider owl-carousel">
+        			{%for event in event%}
+        			<div class="item">
+        				<div class="event_item">
+        					<div class="media">
+        						<div class="d-flex">
+        							<img src="{{event.image_main}}" style="width:240px;height:240px;object-fit: cover;" alt="">
+        						</div>
+        						<div class="media-body">
+        							<a href="{{ event.get_absolute_url_az}}">{{event.date}}</a>
+        							<a href="{{ event.get_absolute_url_az}}"><h4>{{event.title_in_az}}</h4></a>
+        							<p>{{event.event_little_detail_in_az}}</p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+					{%endfor%}
+				
+				</div>
+        	</div>
+        </section>
+		{%endif%}
         <!--================End Event Area =================-->
         
         <!--================Testimonials Area =================-->
