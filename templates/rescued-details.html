@@ -160,9 +160,7 @@ font-weight: 300;
 .single-footer-widget .sub-btn {
     background: #1fb615 !important;
 }
-.footer-social a{
-margin-left: 10px;
-}
+
 @media (min-width: 992px){
 .col-lg-4 {
     -webkit-box-flex: 0;
@@ -175,6 +173,9 @@ footer{
 background: url({%static 'footerback.jpg'%}) no-repeat center center !important;
 padding:0 !important;
 }
+}
+.social-margin{
+margin-left: 10px;
 }
 @media (max-width: 768px){
 .center{
@@ -1472,18 +1473,18 @@ $(document)
                 <div class="row">
                     <div class="col-lg-4  col-md-6 col-sm-6">
 					<h6 class="footer_title">Animal Care Club</h6>
-					<p><i class="fa fa-map-marker"></i>  via Baku, Azerbaijan</p>
-							<p><i class="fa fa-envelope"></i>  E-mail: animalcare.mailbox@gmail.com</p>
+					<p><i class="fa fa-map-marker"></i>	 via Baku, Azerbaijan</p>
+							<p><i class="fa fa-envelope"></i>	animalcare.mailbox@gmail.com</p>
                         <div class="single-footer-widget">
                             
 							
                             
 							<!--<p><i class="fa fa-instagram"></i>  Instagram: @animal.care.club</p>
 							<p><i class="fa fa-facebook"></i>  Facebook: fb.com/animalcareclub</p>-->
-							<div class="col-lg-4 col-md-4 footer-social" style="width:100%;">
+							<div class="col-lg-4 col-md-4 footer-social" style="width:100%;padding:0;">
                         <a href="https://www.facebook.com/animalcareclub/?ref=br_rs"><i class="fa-2x fa fa-facebook"></i></a>
-                        <a href="instagram.com/animal.care.club"><i class="fa-2x fa fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/19061939"><i class="fa-2x fa fa-linkedin"></i></a>
+                        <a href="instagram.com/animal.care.club" class="social-margin"><i class="fa-2x fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/19061939" class="social-margin"><i class="fa-2x fa fa-linkedin"></i></a>
                         
                     </div>
 						</div>
@@ -1494,7 +1495,7 @@ $(document)
                             <h6 class="footer_title">NON-PROFIT ORGANIZATION FOR ANIMAL PROTECTION</h6>
                             <p>Our mission is to reach out our helping hand to our four-legged friends. ACC
 does not operate under any sponsor support. We receive financial aid for the animals from
-charity campaigns and rescueds that we organize ourselves</p>
+charity campaigns and events that we organize ourselves</p>
 							
 						</div>
                     </div>				
