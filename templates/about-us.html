@@ -90,14 +90,15 @@ background:#ff0000 !important;
 padding: 0px 4px !important;
 }
 }
+
 .banner_area .banner_inner .overlay {
-    background: url({%static 'panel.jpg'%}) no-repeat scroll center center;
+    background: url({%static 'about_panel.jpg'%}) no-repeat scroll center center;
 	
 }
 
 footer{
 
-background: url({%static 'footerback.png'%}) no-repeat center center !important;
+background: url({%static 'footerback.jpg'%}) no-repeat center center !important;
 }
 footer p{
 color:white !important;
@@ -145,7 +146,20 @@ font-family: 'Poppins', sans-serif;
 font-size: 1.2rem !important;
 
 }
-
+@media (max-width: 768px){
+.about-img{
+width:100% !important;
+}
+}
+@media (max-width: 768px){
+.desc-img{
+width:100% !important;
+height:auto; !important;
+}
+#desc-img2{
+height:auto !important;
+}
+}
 
 	</style>
 	</head>
@@ -307,16 +321,16 @@ font-size: 1.2rem !important;
 				stop wildlife abuse, confront cruelty to animals in all of its forms. Our work includes group 
 				visits to animal shelters, ecological projects, and educating people mercy towards animals in our 
 				community. </p>
-				<div style="width:auto;height:auto;margin:auto;padding:20px 0;s">
-				<img src="{%static 'about1.jpg'%}" style="display:block;width:60%;height:auto;margin:auto;">
-				<p style="text-align:center;display:block;width:60%;margin:auto;"> <i class="fa fa-info-circle" style="color:#1fb615;"></i><i >   Visit to the stray dogs shelter located in Razin region.  </i></p>
+				<div style="width:auto;height:auto;margin:auto;padding:20px 0;">
+				<img src="{%static 'about1.jpg'%}" style="display:block;width:60%;height:auto;margin:auto;border:2px solid #1fb615 ;border-bottom:0;" class="about-img">
+				<p style="text-align:center;display:block;width:60%;margin:auto;border:2px solid #1fb615;border-top:0;"  class="desc-img"> <i class="fa fa-info-circle" style="color:#1fb615;padding-top:10px;"></i><i >   Visit to the stray dogs shelter located in Razin region.  </i></p>
 				
 				</div>
 				<p class="text"> The club consists of curators and volunteers. We have come together to protest animal cruelty 
 				and violence, to educate youth and to rescue the lives. Our mission is to reach out our helping hand to our four-legged friends.</p>
 				<div style="width:auto;height:auto;;margin:auto;padding:20px 0;">
-					<img src="{%static 'about2.jpg'%}" style="display:block;width:60%;height:auto;margin:auto;">
-					<p style="text-align:center;display:block;width:60%;margin:auto;"><i class="fa fa-info-circle" style="color:#1fb615;"></i><i >   Taking action against cruel cull of stray dogs next to “Sobachiy Yashik” - a place where
+					<img src="{%static 'about2.jpg'%}" style="display:block;width:60%;height:auto;margin:auto;border:2px solid #1fb615 ;border-bottom:0;" class="about-img">
+					<p style="text-align:center;display:block;width:60%;margin:auto;margin:auto;border:2px solid #1fb615 ;border-top:0;" class="desc-img" id="desc-img2"><i class="fa fa-info-circle" style="color:#1fb615;padding-top:10px;"></i><i >   Taking action against cruel cull of stray dogs next to “Sobachiy Yashik” - a place where
 						all stray dogs are brought and killed by municipalities in Balakhany</i></p>
 	  				
 				
@@ -330,8 +344,8 @@ font-size: 1.2rem !important;
 				</ul>
 				<p class="text">These are just four of our goals to help pet animals.</p>
 							<div style="width:auto;height:auto;;margin:auto;padding:20px 0;">
-								<img src="{%static 'about3.jpg'%}" style="display:block;width:60%;height:auto;margin:auto;">
-								<p style="text-align:center;display:block;width:60%;margin:auto;"><i class="fa fa-info-circle" style="color:#1fb615;"></i><i >   Feeding campaign with club volunteers at the shelter
+								<img src="{%static 'about3.jpg'%}" style="display:block;width:60%;height:auto;margin:auto;border:2px solid #1fb615 ;border-bottom:0;" class="about-img">
+								<p style="text-align:center;display:block;width:60%;margin:auto;border:2px solid #1fb615 ;border-top:0;" class="desc-img"><i class="fa fa-info-circle" style="color:#1fb615;padding-top:10px;"></i><i >   Feeding campaign with club volunteers at the shelter
 								</i></p>
 				  				
 							
@@ -340,8 +354,8 @@ font-size: 1.2rem !important;
 				<p class="text">Animal Care Club does not operate under any sponsor support. We receive financial aid for the
 				animals from charity campaigns and events that we organize ourselves.</p>
 				<div style="width:auto;height:auto;;margin:auto;padding:20px 0;">
-					<img src="{%static 'about4.jpg'%}" style="display:block;width:60%;height:auto;margin:auto;">
-					<p style="text-align:center;display:block;width:60%;margin:auto;"><i class="fa fa-info-circle" style="color:#1fb615;"></i><i > Charity sale at French-Azerbaijani University. Books, vegan and vegeterian food were
+					<img src="{%static 'about4.jpg'%}" style="display:block;width:60%;height:auto;margin:auto;border:2px solid #1fb615 ;border-bottom:0;" class="about-img">
+					<p style="text-align:center;display:block;width:60%;margin:auto;border:2px solid #1fb615 ;border-top:0;" class="desc-img"><i class="fa fa-info-circle" style="color:#1fb615;padding-top:10px;"></i><i > Charity sale at French-Azerbaijani University. Books, vegan and vegeterian food were
 				introduced for the visitors
 					</i></p>
 	  				
@@ -350,8 +364,8 @@ font-size: 1.2rem !important;
 				<p class="text">There are a number of individuals and organizations supporting our work, including Azerbaijani-French University, French Ambassador Aurelia Bouchez, Morocco Ambassador Mohammad Adil Embarsh, Icherisheher municipality, VarYox media group, Cult Baku private members club.</p>
 		
 				<div style="width:auto;height:auto;;margin:auto;padding:20px 0;">
-					<img src="{%static 'aboutlast.jpg'%}" style="display:block;width:60%;height:auto;margin:auto;">
-					<p style="text-align:center;display:block;width:60%;margin:auto;"><i class="fa fa-info-circle" style="color:#1fb615;"></i><i > French Ambassador Aurelia Bouchez and the founder of Doggie Styles couture Naila
+					<img src="{%static 'aboutlast.jpg'%}" style="display:block;width:60%;height:auto;margin:auto;border:2px solid #1fb615 ;border-bottom:0;" class="about-img">
+					<p style="text-align:center;display:block;width:60%;margin:auto;border:2px solid #1fb615 ;border-top:0;" class="desc-img"><i class="fa fa-info-circle" style="color:#1fb615;padding-top:10px;"></i><i > French Ambassador Aurelia Bouchez and the founder of Doggie Styles couture Naila
 					Aliyeva taking picture with Ned The Dog at our charity concert “Be their voice!” organized
 					in Landmark Hotel on New Year’s eve
 					</i></p>

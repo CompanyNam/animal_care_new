@@ -42,6 +42,7 @@ $("#concert").hide();
 $("#button_area").show();
 $("#feeding").hide();
 $("#awareness").hide();
+$("style").append("<style>.banner_area .banner_inner .overlay {background: url({%static 'event_panel.jpg'%}) no-repeat scroll center center;}</style>");
 
 {%if language.language_name == "English"%}
 		x=document.getElementById("textall");
@@ -61,6 +62,8 @@ $("#awareness").hide();
 					$("#charity_sale").toggle();
 					$("#feeding").hide();
 					$("#awareness").hide();
+					$("style").append("<style>.banner_area .banner_inner .overlay {background: url({%static 'charity_sale_panel.jpg'%}) no-repeat scroll center center;}</style>");
+
 					{%if language.language_name == "English"%}
 		x=document.getElementById("textall");
 	x.innerHTML="Charity Sales";
@@ -80,6 +83,7 @@ $("#awareness").hide();
 					$("#charity_sale").hide();
 					$("#feeding").hide();
 					$("#awareness").hide();
+					$("style").append("<style>.banner_area .banner_inner .overlay {background: url({%static 'film_panel.jpg'%}) no-repeat scroll center center;}</style>");
 					{%if language.language_name == "English"%}
 		x=document.getElementById("textall");
 	x.innerHTML="Films";
@@ -98,6 +102,7 @@ $("#awareness").hide();
 					$("#charity_sale").hide();
 					$("#feeding").hide();
 					$("#awareness").hide();
+					$("style").append("<style>.banner_area .banner_inner .overlay {background: url({%static 'unknown_panel.jpg'%}) no-repeat scroll center center;}</style>");
 					{%if language.language_name == "English"%}
 		x=document.getElementById("textall");
 	x.innerHTML="Concerts";
@@ -116,6 +121,7 @@ $("#awareness").hide();
 					$("#charity_sale").hide();
 					$("#feeding").hide();
 					$("#awareness").hide();
+					$("style").append("<style>.banner_area .banner_inner .overlay {background: url({%static 'unknown_panel.jpg'%}) no-repeat scroll center center;}</style>");
 					{%if language.language_name == "English"%}
 		x=document.getElementById("textall");
 	x.innerHTML="Eco-Projects";
@@ -134,6 +140,7 @@ $("#awareness").hide();
 					$("#charity_sale").hide();
 					$("#awareness").hide();
 					$("#film").hide();
+					$("style").append("<style>.banner_area .banner_inner .overlay {background: url({%static 'feeding_panel.jpg'%}) no-repeat scroll center center;}</style>");
 					{%if language.language_name == "English"%}
 		x=document.getElementById("textall");
 	x.innerHTML="Feeding Campaigns";
@@ -152,6 +159,7 @@ $("#awareness").hide();
 					$("#charity_sale").hide();
 					$("#awareness").toggle();
 					$("#feeding").hide();
+					$("style").append("<style>.banner_area .banner_inner .overlay {background: url({%static 'awareness_panel.jpg'%}) no-repeat scroll center center;}</style>");
 					{%if language.language_name == "English"%}
 		x=document.getElementById("textall");
 	x.innerHTML="Awareness";
@@ -171,6 +179,7 @@ $("#awareness").hide();
 					$("#charity_sale").hide();
 					$("#awareness").hide();
 					$("#feeding").hide();
+					$("style").append("<style>.banner_area .banner_inner .overlay {background: url({%static 'event_panel.jpg'%}) no-repeat scroll center center;}</style>");
 					{%if language.language_name == "English"%}
 		x=document.getElementById("textall");
 	x.innerHTML="Events";
@@ -279,10 +288,7 @@ background:#1a7f17 !important;
 padding: 0px 4px !important;
 }
 }
-.banner_area .banner_inner .overlay {
-    background: url({%static 'panel.jpg'%}) no-repeat scroll center center;
-	
-}
+
 .event_container{
 width:65%;
 margin:auto;
@@ -405,7 +411,7 @@ margin-left: 10px;
         <!--================Header Menu Area =================-->
         
         <!--================Home Banner Area =================-->
-        <section class="banner_area">
+        <section class="banner_area" id="banner_pic">
             <div class="banner_inner d-flex align-items-center">
             	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
 				<div class="container">
