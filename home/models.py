@@ -123,8 +123,7 @@ class Event(models.Model):
     event_image39 = models.CharField(max_length=720, blank=True)
     event_image40 = models.CharField(max_length=720, blank=True)
     upcoming = models.BooleanField(default=False)
-
-
+    event_iframe=models.CharField(max_length=720,blank=True )
     type=models.CharField(max_length=35)
     slug=models.SlugField(unique=True, editable=False, max_length=130)
 

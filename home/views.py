@@ -159,7 +159,7 @@ def event_detail_eng(request,slug):
         'address':event.event_address,
         'city':event.event_city,
         'language': language,
-
+		'event_iframe':event.event_iframe,
 
     }
     return render(request, "event-details.html", context)
@@ -405,7 +405,7 @@ def event_detail_az(request,slug):
         'address':event.event_address,
         'city':event.event_city,
         'language': language,
-
+		'event_iframe':event.event_iframe,
 
     }
     return render(request, "event-details.html", context)
