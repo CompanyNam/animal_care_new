@@ -363,6 +363,11 @@ max-width:100%;
               </table>
     </div>
     {%endif%}
+	{%if event_iframe%}
+		
+            <iframe style="display:block;margin:auto;margin-top:50px;margin-bottom:30px;" width="560" height="315" src="{{event_iframe}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+	{%endif%}
 
 <!-- <div class="modal fade" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
  <div class="modal-dialog" role="document">
@@ -1475,11 +1480,7 @@ $(document)
     e.prrescuedDefault(); // prrescued the default action (scroll / move caret)
   });
     </script>
-    {%if event_iframe%}
-		
-            <iframe style="display:block;margin:auto;margin-top:50px;" width="560" height="315" src="{{event_iframe}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		
-	{%endif%}
+    
 </section>
         <!--================End rescued Details Area =================-->
         
