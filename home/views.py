@@ -225,7 +225,7 @@ def rescued_detail_eng(request,slug):
         'address':event.event_address,
         'city':event.event_city,
         'language': language,
-		'rescued_iframe':event.event_iframe,
+		'event_iframe':event.event_iframe,
 
     }
     return render(request, "rescued-details.html", context)
