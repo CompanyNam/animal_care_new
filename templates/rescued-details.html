@@ -1459,11 +1459,11 @@ $(document)
     e.prrescuedDefault(); // prrescued the default action (scroll / move caret)
   });
     </script>
-    {%if rescued_iframe%}
-            <div class="iframe-youtube">
-                            {{rescued_iframe}}
-            </div>
-    {%endif%}
+    {%if event_iframe%}
+		
+            <iframe style="display:block;margin:auto;margin-top:50px;" width="560" height="315" src="{{event_iframe}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+	{%endif%}
 </section>
         <!--================End rescued Details Area =================-->
         
