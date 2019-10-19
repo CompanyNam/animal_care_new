@@ -192,7 +192,7 @@ margin-left:10px;
                                       <a class="langs" style="width:40px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:homeeng'%}">EN</a> 
 									  <a class="langs" style="width:40px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:homeaz'%}">AZ</a>
 
-                        <a class="ac_btn" href="#">Donate Now</a>
+                        <!-- <a class="ac_btn" href="#">Donate Now</a> -->
 					</div>
            		</div>
            	</div>
@@ -241,7 +241,7 @@ margin-left:10px;
 					<div class="banner_content text-center">
 
 						<h3></h3>
-						<a class="main_btn" style="background:#ff0000;" href="#">Donate Now</a>
+						<!-- <a class="main_btn" style="background:#ff0000;" href="#">Donate Now</a> -->
 
 					</div>
 				</div>
@@ -402,7 +402,7 @@ margin-left:10px;
         	<div class="container">
         		<div class="main_title">
         			<h2>Upcoming Events</h2>
-        			<p>If you are a serious astronomy fanatic like a lot of us are, you can probably <br /> remember that one event in childhood that started.</p>
+        			<!-- <p>If you are a serious astronomy fanatic like a lot of us are, you can probably <br /> remember that one event in childhood that started.</p> -->
         		</div>
         		<div class="event_slider owl-carousel">
         			{%for event in event%}
@@ -437,7 +437,7 @@ margin-left:10px;
         			<div class="col-lg-4">
         				<div class="testi_left_text">
         					<h4>{{home.testimonial_title}}</h4>
-        					<p>{{home.testimonial_text}}</p>
+        					<p style="color:black;">{{home.testimonial_text}}</p>
         				</div>
         			</div>
         			<div class="col-lg-8">
@@ -446,7 +446,7 @@ margin-left:10px;
 							<div class="item">
 								<div class="testi_item">
 									<img src="{{donor_review.donor_image.url}}" style="width:180px; height:180px;" alt="">
-									<p>{{donor_review.donor_description}}</p>
+									<p style="color:black;">{{donor_review.donor_description}}</p>
 									<h4>{{donor_review.donor_name}}</h4>
 									<h6>{{donor_review.donor_is_who}}</h6>
 								</div>

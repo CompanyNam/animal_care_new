@@ -132,6 +132,17 @@ margin-left: 10px;
     flex: 0 0 33.333333%;
     max-width: 100%;
 }}
+
+.p_120 {
+    padding-top: 120px;
+    padding-bottom: 20px !important;
+}
+
+@media (min-width: 600px){
+.docs{
+width:90% !important;
+}
+}
 	</style>
     </head>
     <body>
@@ -154,7 +165,7 @@ margin-left: 10px;
                                       <a class="langs" style="width:40px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:contact_us_eng' %}">EN</a> 
 									  <a class="langs" style="width:40px;background-color:#f9f9fe;text-color:white;padding:0;text-align:center;" href="{%url 'animalcare:contact_us_az'%}">AZ</a>
 
-                        <a class="ac_btn" href="#">Donate Now</a>
+                        <!-- <a class="ac_btn" href="#">Donate Now</a> -->
 					</div>
            		</div>
            	</div>
@@ -193,6 +204,7 @@ margin-left: 10px;
             </div>
 
         </header>
+
         <!--================Header Menu Area =================-->
         
         <!--================Home Banner Area =================-->
@@ -205,55 +217,64 @@ margin-left: 10px;
         
         <!--================Contact Area =================-->
         <section class="contact_area p_120">
-            <div class="container">
+ <div class="container" style="padding-bottom:25px;">
 
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="contact_info">
-                            <div class="info_item">
-                                <i class="lnr lnr-home"></i>
-                                <h6>{{contact.our_address}}</h6>
-                                <p>{{contact.our_address_detailed}}</p>
-                            </div>
-                            <div class="info_item">
-                                <i class="lnr lnr-phone-handset"></i>
-                                <h6><a href="#">{{contact.telephone_number}}</a></h6>
-                                <p>{{contact.telephone_number_text}}</p>
-                            </div>
-                            <div class="info_item">
-                                <i class="lnr lnr-envelope"></i>
-                                <h6><a href="#">{{contact.mail}}</a></h6>
-                                <p>{{contact.mail_text}}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-9">
-
-                        <form class="row contact_form" method="POST" id="contactForm" >
-                            {%csrf_token%}
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" >
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-md-12 text-right">
-                                <button type="submit" value="submit" class="btn submit_btn">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+        {%if language.language_name == "English"%}
+		
+		<h2 style="text-align:center;">Join Us!</h2>
+		<p>Volunteers make a huge contribution to the work we do to prevent
+cruelty, promote kindness to and alleviate suffering of living creatures.
+Our caring and hard-working volunteers help in a variety of programs
+throughout the year. We welcome members of all ages as their support
+helps us to work on projects involving animal rights and environmental
+issues. We currently have available positions for various vacancies. You
+are invited to join our volunteer team today by completing three easy
+steps:</p>
+<ol>
+  <li><b style="color:#1a7f17;">Complete an Application.</b> All volunteers must complete the application which provides
+us with your contact information and understanding of what areas you would like to help.</li>
+  <li><b style="color:#1a7f17;">Attend an Orientation.</b> Our orientation enables you to understand our mission, goals and
+guidelines that we operate under.</li>
+  <li><b style="color:#1a7f17;">Commit to Volunteering.</b> With our flexible hours, you’ll be able to tailor your volunteer
+experience around your schedule. We can also give you activities that best suit your skills
+and interests.</li>
+</ol>  
+<div style="width:90%;height:auto;;margin:auto;" >
+<iframe class="docs"
+src="https://docs.google.com/forms/d/e/1FAIpQLSf18HAB515DJcCENJxmPTW6E21SdK7kv
+EkaZE0_WMKeWN6wMA/viewform?embedded=true" width="100%" height="900" style="margin:auto;"
+frameborder="0" marginheight="0" marginwidth="0">Загрузка...</iframe>
+</div>
+		
+		
+		{%else%}
+		<h2 style="text-align:center;">Bizim ailəmizə qoşul!</h2>
+		<p>Könüllülərin iştirakı heyvanların mühafizəsi və canlılara qayğının təbliğatı naminə
+gördüyümüz işlərə çox böyük töhfə verir. Bizim yardımsevər və çalışqan könüllülərimiz il
+boyu müxtəlif tədbirlərimizdə iştirak edib köməklik göstərirlər. Heyvan hüquqları və ətraf
+mühit üçün həyata keçirəcəyimiz layihələrdə öz dəstəyini göstərə biləcək hər yaşdan
+könüllülərə qapılarımız açıqdır. Müxtəlif vakansiyalarımız mövcuddur. Səni bu 3 sadə addımı
+həyata keçirərək könüllü komandamıza qoşulmağa dəvət edirik:</p>
+<ol>
+  <li><b style="color:#1a7f17;">Form Doldurmaq.</b> Bütün könüllülərin üzvlük üçün formu doldurması mütləqdir,
+formda sizin əlaqə məlumatlarınız və bizə hansı fəaliyyətlərdə kömək edəcəyiniz
+barədə qeyd olunur.</li>
+  <li><b style="color:#1a7f17;">Görüşdə iştirak etmək.</b> Komandamıza qoşulmazdan əvvəl bizimlə tanışlıq üçün
+görüş keçirmək sizə klubumuzun missiyasını, məqsədlərini və fəaliyyət prinsipini
+ətraflı öyrənməyə kömək edəcək.</li>
+  <li><b style="color:#1a7f17;">Könüllü fəaliyyəti öhdənizə götürmək.</b> Bizim dəyişkən iş saatlarımız sizə imkan
+verəcək ki, könüllülük fəaliyyətinizi öz qrafikinizə uyğunlaşdıra biləsiniz. Həmçinin, siz
+bu komandada öz maraq və bacarıqlarınıza uyğun işləri seçə biləcəksiniz.</li>
+</ol>  
+<div style="width:90%;height:auto;;margin:auto;" >
+<iframe class="docs"
+src="https://docs.google.com/forms/d/e/1FAIpQLSf18HAB515DJcCENJxmPTW6E21SdK7kv
+EkaZE0_WMKeWN6wMA/viewform?embedded=true" width="100%" height="900" style="margin:auto;"
+frameborder="0" marginheight="0" marginwidth="0">Загрузка...</iframe>
+</div>
+		
+		
+		{%endif%}
             </div>
         </section>
         <!--================Contact Area =================-->

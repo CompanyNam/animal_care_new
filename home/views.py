@@ -108,6 +108,7 @@ def event_detail_eng(request,slug):
     context = {
         'menu':menu,
         'home':home,
+		'event':event,
         'event_date': event.date,
         'event_little_details': event.event_little_detail_in_eng,
         'event_title': event.title_in_eng,
@@ -174,6 +175,7 @@ def rescued_detail_eng(request,slug):
     context = {
         'menu':menu,
         'home':home,
+		
         'rescued_date': event.date,
         'rescued_little_details': event.event_little_detail_in_eng,
         'rescued_title': event.title_in_eng,
@@ -354,6 +356,7 @@ def event_detail_az(request,slug):
     context = {
         'menu':menu,
         'home':home,
+		'event':event,
         'event_date': event.date,
         'event_little_details': event.event_little_detail_in_az,
         'event_title': event.title_in_az,

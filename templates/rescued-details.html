@@ -188,6 +188,25 @@ max-width:100%;
 .banner_area .banner_inner .overlay {
     background: url(/static/rescued_panel.jpg) no-repeat scroll center center !important;
 }
+@media (max-width: 580px){
+.social_div{
+width:70% !important;
+}
+}
+
+
+
+@media (max-width: 440px){
+.social_div{
+width:80% !important;
+}
+}
+@media (max-width: 408px){
+.social_div{
+width:90% !important;
+
+}
+}
 </style>
 
 
@@ -215,7 +234,7 @@ max-width:100%;
 
                                       
 
-                        <a class="ac_btn" href="#">Donate Now</a>
+                        <!-- <a class="ac_btn" href="#">Donate Now</a> -->
 					</div>
            		</div>
            	</div>
@@ -298,6 +317,52 @@ max-width:100%;
     <p></p>
 
     <div style="width:100%;margin:auto;margin-top:50px;">
+	
+	
+	
+	
+	<script>
+			
+				text="{{ request.build_absolute_uri }}";
+				
+				title="{{rescued_title}}";
+				
+				
+				desc="{{rescued_little_details}}";
+				
+				function face(){
+					window.open('http://www.facebook.com/sharer.php?u=' + text);
+				}
+				function vk(){
+					window.open('http://vk.com/share.php?url=' + text + '&title=' + title + '&comment=' + desc);
+				}
+				function telegram(){
+					window.open('https://t.me/share/url?url=' + text + '&text=' + title);
+				}
+				function linkedin(){
+					window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + text + '&title=' + title + '&summary=' + desc) ;
+				}
+				function twitter(){
+					window.open('https://twitter.com/intent/tweet?url=' + text + '&text=' + desc) ;
+				}
+			</script>
+			
+		<div style="margin:auto;width:348px;height:64px;padding-bottom:50px;" class="social_div">
+			
+             <button onclick="face();" style="width:51px;height:51px;background:#3b5998;box-shadow:none;border:0;border-radius:50%;"><i class="fa-2x fa fa-facebook" style="color: white;"></i></button>
+			 
+			 <button onclick="vk();" style="width:51px;height:51px;background:#5b88bd;box-shadow:none;border:0;border-radius:50%;margin-left:12px;"><i class="fa-2x fa fa-vk" style="color: white;"></i></button>
+			 	
+			
+			<button onclick="telegram();" style="width:51px;height:51px;background:#5b88bd;box-shadow:none;border:0;border-radius:50%;margin-left:12px;"><span class="iconify" style="color:white;width:34px;height:34px;" data-icon="fa-brands:telegram-plane" data-inline="true"></span></button>
+			 
+			 
+			<button onclick="linkedin();" style="width:51px;height:51px;background:#006cb2;box-shadow:none;border:0;border-radius:50%;margin-left:12px;" ><i class="fa-2x fa fa-linkedin" style="color: white;"></i></button>
+			 
+			<button onclick="twitter();" style="width:51px;height:51px;background:#006cb2;box-shadow:none;border:0;border-radius:50%;margin-left:12px;" ><i class="fa-2x fa fa-twitter " style="color: white;"></i></button>			 
+			
+			
+		</div>
             <h2 style="text-align:center;">{{rescued_title}}</h2>
         <p></p>
                 {%if rescued_main_image %}
@@ -365,7 +430,7 @@ max-width:100%;
     {%endif%}
 	{%if event_iframe%}
 		
-            <iframe style="display:block;margin:auto;margin-top:50px;margin-bottom:30px;" width="560" height="315" src="{{event_iframe}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="iframe-youtube" style="display:block;margin:auto;margin-top:50px;margin-bottom:30px;" width="50%" height="auto" src="{{event_iframe}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		
 	{%endif%}
 
