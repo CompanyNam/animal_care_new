@@ -64,7 +64,7 @@
 
 }
 .icon-bar{
-background:#1a7f17; !important;
+background:#1a7f17 !important;
 }
 h3{
 color: #fff;
@@ -143,19 +143,20 @@ padding: 0px 4px !important;
 }
 }
 .banner_area .banner_inner .overlay {
-    background: url({%static 'rescued_panel.jpg'%}) no-repeat scroll center center;
+    background: url("{%static 'rescued_panel.jpg'%}") no-repeat scroll center center;
 	
 }
 footer{
 
-background: url({%static 'footerback.png'%}) no-repeat center center !important;
+background: url("{%static 'footerback.png'%}") no-repeat center center !important;
+background-size: cover !important;
 }
 footer p{
 color:white !important;
 }
 @media (max-width: 768px){
 footer{
-background: url({%static 'footerback.jpg'%}) no-repeat center center !important;
+background: url("{%static 'footerback.jpg'%}") no-repeat center center !important;
 padding:0 !important;
 }
 }
@@ -318,7 +319,7 @@ margin-left: 10px;
         <!--================ start footer Area  =================-->
          <footer class="footer-area section_gap" style="padding-bottom:50px;margin-top:75px;">
             <div class="container">
-                <div class="row">
+                <div class="row justify-content-between">
                     <div class="col-lg-4  col-md-6 col-sm-6">
 					<h6 class="footer_title">Animal Care Club</h6>
 					<p><i class="fa fa-map-marker"></i>	 via Baku, Azerbaijan</p>
@@ -347,7 +348,7 @@ charity campaigns and events that we organize ourselves</p>
 							
 						</div>
                     </div>				
-                    <div class="col-lg-4 col-md-6 col-sm-6">
+                    <!-- <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="single-footer-widget">
                             <h6 class="footer_title">SIGN ACC Newsletter</h6>
                             <p>Stay up to date on the latest news delivered straight to your inbox!</p>		
@@ -361,7 +362,7 @@ charity campaigns and events that we organize ourselves</p>
                                 </form>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     						
                 </div>
                 <div class="border_line"></div>

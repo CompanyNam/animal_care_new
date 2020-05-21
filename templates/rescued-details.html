@@ -60,7 +60,7 @@
             width:320px;
         }
         .modal.and.carousel {
-  position: fixed; // Needed because the carousel overrides the position property
+  position: fixed; /* Needed because the carousel overrides the position property */
 }
 .icon-bar{
 background:#1a7f17 !important;
@@ -114,7 +114,7 @@ padding: 0px 4px !important;
 }
 }
 .banner_area .banner_inner .overlay {
-    background: url({%static 'rescued_details_panel.jpg'%}) no-repeat scroll center center;
+    background: url("{%static 'rescued_details_panel.jpg'%}") no-repeat scroll center center;
 	
 }
 a:hover{
@@ -144,15 +144,15 @@ background:#ff0000 !important;
     margin-top: 8px;
 }
 footer{
-
-background: url({%static 'footerback.png'%}) no-repeat center center !important;
+    background: url("{%static 'footerback.png'%}") no-repeat center center !important;
+    background-size: cover !important;
 }
 footer p{
 color:white !important;
 }
 @media (max-width: 768px){
 footer{
-background: url({%static 'footerback.jpg'%}) no-repeat center center !important;
+background: url("{%static 'footerback.jpg'%}") no-repeat center center !important;
 padding:0 !important;
 }
 }
@@ -181,7 +181,7 @@ font-weight: 300;
 }}
 @media (max-width: 768px){
 footer{
-background: url({%static 'footerback.jpg'%}) no-repeat center center !important;
+background: url("{%static 'footerback.jpg'%}") no-repeat center center !important;
 padding:0 !important;
 }
 }
@@ -358,23 +358,22 @@ width:90% !important;
 				}
 			</script>
 			
-		<div style="margin:auto;width:348px;height:64px;padding-bottom:50px;" class="social_div">
-			
-             <button onclick="face();" style="width:51px;height:51px;background:#3b5998;box-shadow:none;border:0;border-radius:50%;"><i class="fa-2x fa fa-facebook" style="color: white;"></i></button>
-			 
-			 <button onclick="vk();" style="width:51px;height:51px;background:#5b88bd;box-shadow:none;border:0;border-radius:50%;margin-left:12px;"><i class="fa-2x fa fa-vk" style="color: white;"></i></button>
-			 	
-			
-			<button onclick="telegram();" style="width:51px;height:51px;background:#5b88bd;box-shadow:none;border:0;border-radius:50%;margin-left:12px;"><span class="iconify" style="color:white;width:34px;height:34px;" data-icon="fa-brands:telegram-plane" data-inline="true"></span></button>
-			 
-			 
-			<button onclick="linkedin();" style="width:51px;height:51px;background:#006cb2;box-shadow:none;border:0;border-radius:50%;margin-left:12px;" ><i class="fa-2x fa fa-linkedin" style="color: white;"></i></button>
-			 
-			<button onclick="twitter();" style="width:51px;height:51px;background:#006cb2;box-shadow:none;border:0;border-radius:50%;margin-left:12px;" ><i class="fa-2x fa fa-twitter " style="color: white;"></i></button>			 
-			
-			
-		</div>
             <h2 style="text-align:center;">{{rescued_title}}</h2>
+            <div style="margin:auto;width:348px;height:64px;padding-bottom:50px;" class="social_div">
+                
+                 <button onclick="face();" style="width:51px;height:51px;background:#3b5998;box-shadow:none;border:0;border-radius:50%;"><i class="fa-2x fa fa-facebook" style="color: white;"></i></button>
+                 
+                 <button onclick="vk();" style="width:51px;height:51px;background:#5b88bd;box-shadow:none;border:0;border-radius:50%;margin-left:12px;"><i class="fa-2x fa fa-vk" style="color: white;"></i></button>
+                     
+                
+                <button onclick="telegram();" style="width:51px;height:51px;background:#5b88bd;box-shadow:none;border:0;border-radius:50%;margin-left:12px;"><span class="iconify" style="color:white;width:34px;height:34px;" data-icon="fa-brands:telegram-plane" data-inline="true"></span></button>
+                 
+                 
+                <button onclick="linkedin();" style="width:51px;height:51px;background:#006cb2;box-shadow:none;border:0;border-radius:50%;margin-left:12px;" ><i class="fa-2x fa fa-linkedin" style="color: white;"></i></button>
+                 
+                <button onclick="twitter();" style="width:51px;height:51px;background:#006cb2;box-shadow:none;border:0;border-radius:50%;margin-left:12px;" ><i class="fa-2x fa fa-twitter " style="color: white;"></i></button>			 
+                
+            </div>
         <p></p>
                 {%if rescued_main_image %}
 
@@ -398,7 +397,7 @@ width:90% !important;
     </div>
     <div style=" width:100%;margin:auto;">
 
-                        <div class="row rescued_text_inner" style=" width:90%;%;margin:auto;">
+                        <div class="row rescued_text_inner" style=" width:90%;margin:auto;">
                             <div class="col-lg-12" style="margin-top:10px;">
                                 <div class="left_text" >
                                     <ul class="list" style="width:100%;text-align:center;">
@@ -1563,7 +1562,7 @@ $(document)
         <!--================ start footer Area  =================-->
         <footer class="footer-area section_gap" style="padding-bottom:50px;margin-top:75px;">
             <div class="container">
-                <div class="row">
+                <div class="row justify-content-between">
                     <div class="col-lg-4  col-md-6 col-sm-6">
 					<h6 class="footer_title">Animal Care Club</h6>
 					<p><i class="fa fa-map-marker"></i>	 via Baku, Azerbaijan</p>
@@ -1592,7 +1591,7 @@ charity campaigns and events that we organize ourselves</p>
 							
 						</div>
                     </div>				
-                    <div class="col-lg-4 col-md-6 col-sm-6">
+                    <!-- <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="single-footer-widget">
                             <h6 class="footer_title">SIGN ACC Newsletter</h6>
                             <p>Stay up to date on the latest news delivered straight to your inbox!</p>		
@@ -1606,7 +1605,7 @@ charity campaigns and events that we organize ourselves</p>
                                 </form>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     						
                 </div>
                 <div class="border_line"></div>
