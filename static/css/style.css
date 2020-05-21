@@ -2190,7 +2190,8 @@ button:focus {
 }
 
 .testi_item {
-  background: #fff;
+  /* background: #fff; */
+  background: #1a7f17;
   text-align: center;
   padding: 50px 30px;
 }
