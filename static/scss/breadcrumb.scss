@@ -53,8 +53,7 @@
 	position: relative;
 	z-index: 1;
 	.banner_inner{
-		// background: #04091e;
-		background: rgba(26, 127, 23, 0.94);
+		background: #04091e;
 		position: relative; 
 		overflow: hidden;
 		width: 100%;
@@ -95,7 +94,8 @@
 		overflow: hidden;
 		width: 100%;
 		min-height: 300px;
-		background: #060b20;
+		// background: #060b20;
+		background: rgba(26, 127, 23, 0.94);
 		z-index: 1;
 		.overlay{
 			background: url(../img/banner/banner.jpg) no-repeat scroll center center;
