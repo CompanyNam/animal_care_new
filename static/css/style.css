@@ -549,7 +549,7 @@ button:focus {
   overflow: hidden;
   width: 100%;
   min-height: 300px;
-  background: #060b20;
+  background: rgba(26, 127, 23, 0.94);
   z-index: 1;
 }
 
